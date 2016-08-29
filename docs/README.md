@@ -17,27 +17,27 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase One: Rails Backend Setup (1 Day)###
 
-######Objective: Functioning rails project set up with auth ready to hook in to front-end authentication.######
+#####Objective: Functioning rails project set up with auth ready to hook in to front-end authentication.#####
     * New Rails project
     * User Model/Migration
     * Rails Auth Backend
     * StaticPages controller and root view to serve API
-    * Review goals/######objective
+    * Review goals/#####objective
 
 ###Phase Two: Front-End Authentication (1 Day)###
 
-######Objective: Set up frontend auth to interact with rails backend and create a secure login.######
+#####Objective: Set up frontend auth to interact with rails backend and create a secure login.#####
     * Webpack/Dependencies setup
     * Redux authentication cycle
     * User sign-in/sign-up components
     * Blank component to display after successful login
     * Seed users into database
     * Style new feature
-    * Review goals/######objective
+    * Review goals/#####objective
 
 ###Phase Three: Channel model and Components (1 Day)###
 
-######Objective: Set up create/edit/destroy for Channel through API######
+#####Objective: Set up create/edit/destroy for Channel through API#####
   * Channel model
   * Seed Channels to test API
   * API for create/edit/destroy
@@ -49,7 +49,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Four: Message mode and Components (2 Days)###
 
-######Objective: Set up create/destroy for Message through API######
+#####Objective: Set up create/destroy for Message through API#####
     * Message belongs to Channel
     * Accurate timestamps and queuing messages
     * Message components
@@ -64,7 +64,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Five: Direct Messages (2 Days)###
 
-######Objective: Implement DM service to keep private conversations off channel chat######
+#####Objective: Implement DM service to keep private conversations off channel chat#####
     * Create/Destroy API for Direct Message Chats
     * DM Creation Component on Home Page
     * Components
@@ -80,7 +80,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Six: Search Message (1 Day)###
 
-######Objective: Add search functionality to Home Page to search through _all_ messages, DM included.######
+#####Objective: Add search functionality to Home Page to search through _all_ messages, DM included.#####
     * Components:
       - ResultDisplay
       - ResultDisplayItem <-- referring to Message Component
@@ -92,7 +92,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Seven: Guest/Demo Login (1/2 Day)###
 
-######Objective: Add Guest button to Splashpage to allow employers to explore app######
+#####Objective: Add Guest button to Splashpage to allow employers to explore app#####
     * Button on Splashpage with access rights to seeded information
     * Reset seed information upon logout
     * Messaging capability on dummy account
@@ -101,7 +101,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Eight: Team Creation (1/2 Day)###
 
-######Objective: CRUD API for Teams######
+#####Objective: CRUD API for Teams#####
     * Teams have many users
     * Teams belong to one user
     * Components:
@@ -112,7 +112,7 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ###Phase Nine: Style App (remaining time ~ 1 Day)###
 
-######Objective: Style app to visually impress######
+#####Objective: Style app to visually impress#####
     * Check thoroughly for usability bugs
     * Clean console throughout navigation
     * Style all elements to be coherent and supplementary to experience
