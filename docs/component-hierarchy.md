@@ -1,30 +1,32 @@
-AuthFormContainer
+#Component Hierarchy#
 
-  -> AuthForm
+##AuthFormContainer##
 
-GreetingContainer
+  * AuthForm
 
-  -> ChannelChat
-  -> DMIndex
-  -> ChannelIndex
+##GreetingContainer##
 
-ChannelChatContainer
+  * ChannelChat
+  * DMIndex
+  * ChannelIndex
 
-  -> ChatView
-  -> MessageForm
+##ChannelChatContainer##
 
-DMIndexContainer
+  * ChatView
+  * MessageForm
 
-  -> AddDMForm
-  -> DMIndex
+##DMIndexContainer##
 
-ChannelIndexContainer
+  * AddDMForm
+  * DMIndex
 
-  -> ChannelIndexItem
-  -> AddChannelForm
+##ChannelIndexContainer##
 
-SplashpageContainer
+  * ChannelIndexItem
+  * AddChannelForm
 
-  -> AddTeamForm
-  -> NavBar
-  -> TeamSearchForm
+##SplashpageContainer##
+
+  * AddTeamForm
+  * NavBar
+  * TeamSearchForm
