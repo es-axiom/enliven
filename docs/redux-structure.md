@@ -14,9 +14,10 @@
   2. POST /api/session
   3. receiveCurrentUser is the success callback
 
-* sign-out.
-  1 invoke.d from the header onSubmit
-  2 DELETE. /api/session3
+* sign-out
+  1. invoked from the header onSubmit
+  2. DELETE /api/session3
+
 * getCurrentUser
   1. invoked by App
   2. GET /api/session
