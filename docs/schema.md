@@ -1,4 +1,4 @@
-###users###
+##users##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
@@ -8,7 +8,9 @@
 | password_digest | string | not null |
 | session_token | string | not null, unique |
 
-###teams###
+-------------------
+
+##teams##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
@@ -17,7 +19,9 @@
 | description | text | |
 | searchable | boolean | default: true |
 
-###channels###
+-------------------
+
+##channels##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
@@ -27,7 +31,9 @@
 | user_id | integer | not null, foreign key (references _user_, refers to creator) |
 | status | string | |
 
-###dm_chats###
+-------------------
+
+##dm_chats##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
@@ -37,7 +43,9 @@
 | user_two_id | integer | not null, foreign key (references _user2_) |
 | searchable | boolean | default: true |
 
-###messages###
+-------------------
+
+##messages##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
