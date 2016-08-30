@@ -1,7 +1,7 @@
 ###users###
 
 | column_name | data type | details |
--------------------------------------
+| ----------- | --------- | ------- |
 | id | integer | not null, primary key|
 | username | string | not null, indexed, unique |
 | email | string | not null, indexed, unique |
@@ -11,7 +11,7 @@
 ###teams###
 
 | column_name | data type | details |
--------------------------------------
+| ----------- | --------- | ------- |
 | id | integer | not null, primary key |
 | user_id | integer | not null, foreign key (references _user_) |
 | name | string | not null, unique, indexed |
@@ -21,7 +21,7 @@
 ###channels###
 
 | column_name | data type | details |
--------------------------------------
+| ----------- | --------- | ------- |
 | id | integer | not null, primary key |
 | name | string | not null, indexed |
 | team_id | integer | not null, foreign key (references _team_) |
@@ -31,7 +31,7 @@
 ###dm_chats###
 
 | column_name | data type | details |
--------------------------------------
+| ----------- | --------- | ------- |
 | id | integer | not null, primary key |
 | title | string | not null, indexed |
 | user_id | integer | not null, foreign key (references _user_) |
@@ -40,7 +40,7 @@
 ###messages###
 
 | column_name | data type | details |
--------------------------------------
+| ----------- | --------- | ------- |
 | id | integer | not null, primary key |
 | author_id | integer | not null, foreign key (references _user_) |
 | content | text | not null |
