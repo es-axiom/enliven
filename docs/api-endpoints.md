@@ -5,6 +5,8 @@
 ###Root###
   * GET / -> loads React app
 
+-------------------
+
 ##JSON API##
 
 ###Users###

@@ -38,14 +38,14 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 ###Phase Three: Channel model and Components (1 Day)###
 
 ####Objective: Set up create/edit/destroy for Channel through API####
-  * Channel model
-  * Seed Channels to test API
-  * API for create/edit/destroy
-  * CRUD API for messages
-  * Sending messages on channel
-  * Deleting messages from convo
-  * Style channel components
-  * Seed more users/channels
+    * Channel model
+    * Seed Channels to test API
+    * API for create/edit/destroy
+    * CRUD API for messages
+    * Sending messages on channel
+    * Deleting messages from convo
+    * Style channel components
+    * Seed more users/channels
 
 ###Phase Four: Message mode and Components (2 Days)###
 
@@ -82,9 +82,9 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
 
 ####Objective: Add search functionality to Home Page to search through _all_ messages, DM included.####
     * Components:
-      - ResultDisplay
-      - ResultDisplayItem <-- referring to Message Component
-      - SearchForm
+      * ResultDisplay
+      * ResultDisplayItem <-- referring to Message Component
+      * SearchForm
     * onClick activation for search display
     * All messages displayed accessible to user
     * Instant type-to-search functionality
@@ -105,9 +105,9 @@ _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rai
     * Teams have many users
     * Teams belong to one user
     * Components:
-      - TeamsForm on Home Page
-      - TeamEditForm
-      - TeamUserIndex
+      * TeamsForm on Home Page
+      * TeamEditForm
+      * TeamUserIndex
     * Style teams component
 
 ###Phase Nine: Style App (remaining time ~ 1 Day)###
