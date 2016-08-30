@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if(window.current_user) {
     const initialState = { session: { current_user: window.current_user }};
     store = configureStore(initialState);
-  } else
+  } else {
     store = configureStore();
   }
 
