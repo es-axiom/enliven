@@ -16,12 +16,7 @@
 
 * sign-out
   1. invoked from the header onSubmit
-  2. DELETE /api/session3
-
-* getCurrentUser
-  1. invoked by App
-  2. GET /api/session
-  3. receiveCurrentUser is the success callback
+  2. DELETE /api/session
 
 ###Session API Response Actions:###
 
@@ -71,9 +66,9 @@
 
 ###Channels API Request Actions###
 
-* fetchAllChannels
+* fetchTeamChannels
   1. invoked from Team didMount
-  2. GET /api/channels
+  2. GET /api/channels/teams/:id
   3. receiveAllChannels is the success callback
 
 * fetchChannel
@@ -93,7 +88,7 @@
 
 ###Channels API Response Actions###
 
-* receiveAllChannels
+* receiveTeamChannels
   1. invoked from API callback
   2. the ChannelsReducer updates channels in app state
 
@@ -110,9 +105,9 @@
 
 ###DM_Chats API Request Actions###
 
-* fetchAllDM_Chats
+* fetchUserDM_Chats
   1. invoked from Team didMount
-  2. GET /api/DM_chats
+  2. GET /api/DM_chats/user/:id
   3. receiveAllDM_Chats is the success callback
 
 * fetchDM_Chat
@@ -127,7 +122,7 @@
 
 ###DM_Chats API Response Actions###
 
-* receiveAllDM_Chats
+* receiveUserDM_Chats
   1. invoked from API callback
   2. the DM_ChatsReducer updates the DM_Chats in app state
 
