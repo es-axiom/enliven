@@ -1,0 +1,22 @@
+{
+  "name": "enliven",
+  "version": "1.0.0",
+  "description": "~~[link to Enliven App - not live](##)~~",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack -w"
+    "postinstall": "./node_modules/.bin/webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "6.3.1",
+    "npm": "3.10.3"
+  }
+}
