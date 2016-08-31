@@ -13,6 +13,9 @@ const App = ({ children }) => (
       </ul>
     </header>
     { children }
+    <footer className='footer-container'>
+      <div>Contact Us</div>
+    </footer>
   </div>
 )
 
