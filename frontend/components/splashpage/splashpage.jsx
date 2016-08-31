@@ -3,8 +3,11 @@ import React from 'react';
 class Splashpage extends React.Component {
   render() {
     return (
-      <div className='splashpage_container'>
-        This should be rendering
+      <div className="Overlay">
+        <div className="Overlay-quote">
+          <img className="home_image" src="http://res.cloudinary.com/es-axiom/image/upload/v1472623165/0706140402101moore_5-2_iybxe3.jpg" />
+          <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
+        </div>
       </div>
     )
   }
