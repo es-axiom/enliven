@@ -9,7 +9,7 @@
   background-color: whitesmoke;
   .Overlay-quote {
     padding: 30px;
-    margin-top: 110px;
+    margin-top: 150px;
     .Overlay-quote-text {
       font-size: 3em;
     }
@@ -59,6 +59,7 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
+  min-width: 900px;
   display: block;
   background-color: #5E4C32;
   text-align: right;

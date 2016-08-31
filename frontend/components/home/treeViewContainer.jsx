@@ -1,4 +1,5 @@
 import React from 'react';
+// import ChannelsContainer from './channels/channels_container';
 
 class TreeViewContainer extends React.Component {
   componentDidMount() {
@@ -8,11 +9,7 @@ class TreeViewContainer extends React.Component {
   render() {
     return (
       <div>
-        <section className='channels-container'>
-          <ul className='channel-title'>
-            #all_channels
-          </ul>
-        </section>
+        // TODO: Add ChannelsContainer
         <section className='dm-chats-container'>
           #all dm_chats
         </section>
