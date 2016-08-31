@@ -8,9 +8,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug'
+  gem 'faker', '1.6.6'
 end
 
 group :development do

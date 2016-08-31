@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.login_form_container {
+  padding: 10px;
+  margin: auto;
+}
+
+.login_form_box {
+  padding: 10px;
+  margin: auto;
+}
+
+.login_input label {
+  background-color: grey;
+}
+
+.login_input {
+  padding: 10px;
+  border: 1px solid grey;
+  margin: 10px;
+}
