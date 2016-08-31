@@ -8,8 +8,8 @@
   vertical-align: center;
   background-color: whitesmoke;
   .Overlay-quote {
-    padding: 40px;
-    margin-top: 100px;
+    padding: 30px;
+    margin-top: 120px;
     .Overlay-quote-text {
       font-size: 3em;
     }
@@ -28,12 +28,13 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: #445C6F;
+  background-color: #5E4C32;
   border-bottom: 4px solid gray;
   justify-content: space-between;
 }
 
 .head-title {
+  margin: 10px;
   font-size: 2em;
   font-weight: bolder;
   color: white;
@@ -44,8 +45,11 @@
     color: white;
     border-right: 1px solid gray;
     display: block;
-    padding-right: 20px;
     float: left;
     padding: 20px;
+  }
+  li:hover {
+    background-color: whitesmoke;
+    color: black;
   }
 }
