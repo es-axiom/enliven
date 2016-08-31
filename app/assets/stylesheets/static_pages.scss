@@ -24,11 +24,28 @@
   }
 }
 
+.navbar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #445C6F;
+  border-bottom: 4px solid gray;
+  justify-content: space-between;
+}
+
 .head-title {
   font-size: 2em;
   font-weight: bolder;
   color: white;
-  padding: 20px;
-  font-style: oblique;
-  background-color: #445C6F;
+}
+
+.navbar-list {
+  li {
+    color: white;
+    border-right: 1px solid gray;
+    display: block;
+    padding-right: 20px;
+    float: left;
+    padding: 20px;
+  }
 }

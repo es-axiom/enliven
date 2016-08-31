@@ -5,7 +5,7 @@ class Splashpage extends React.Component {
     return (
       <div className="Overlay">
         <div className="Overlay-quote">
-          <img className="home_image" src="http://res.cloudinary.com/es-axiom/image/upload/v1472623165/0706140402101moore_5-2_iybxe3.jpg" />
+          <img className="home_image" src="http://res.cloudinary.com/es-axiom/image/upload/v1472661914/rolling-hills_ahfnsi.jpg" />
           <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
         </div>
       </div>
