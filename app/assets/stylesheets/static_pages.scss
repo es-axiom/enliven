@@ -31,6 +31,7 @@
   background-color: #5E4C32;
   border-bottom: 4px solid gray;
   justify-content: space-between;
+  min-width: 900px;
 }
 
 .head-title {
@@ -55,5 +56,20 @@
 }
 
 .footer-container {
-
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: block;
+  background-color: #5E4C32;
+  text-align: right;
+  color: white;
+  div {
+    padding: 20px;
+    color: white;
+    border-left: 1px solid white;
+  }
+  div:hover {
+    color: black;
+    background-color: white;
+  }
 }
