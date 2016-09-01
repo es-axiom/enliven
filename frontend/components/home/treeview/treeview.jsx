@@ -1,9 +1,7 @@
 import React from 'react';
-// import ChannelsContainer from './channels/channels_container';
-//TODO: import ChannelsContainer
-import TeamContainer from './team/team_container';
+import TeamContainer from '../team/team_container';
 
-class TreeViewContainer extends React.Component {
+class TreeView extends React.Component {
   componentDidMount() {
 // TODO: Populate Channels
   }
@@ -19,4 +17,4 @@ class TreeViewContainer extends React.Component {
   }
 }
 
-export default TreeViewContainer;
+export default TreeView;

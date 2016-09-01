@@ -1,7 +1,7 @@
 import React from 'react';
-import TreeViewContainer from './treeViewContainer';
+import TreeViewContainer from './treeview/treeview_container';
 
-const Home = ({store}) => {
+const Home = () => {
   return (
     <section className="treeView">
       <TreeViewContainer />

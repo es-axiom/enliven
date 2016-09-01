@@ -8,11 +8,9 @@ class Api::TeamsController < ApplicationController
     end
   end
 
-  def update
-  end
-
   def show
     @team = Team.find_by_id(params[:id])
+    render 'api/teams/show'
   end
 
   def destroy
