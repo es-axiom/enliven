@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      email: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,7 +15,7 @@ class SessionForm extends React.Component {
   componentWillMount() {
     this.redirectIfLoggedIn();
   }
-  
+
   componentDidUpdate() {
     this.redirectIfLoggedIn();
   }
@@ -43,6 +44,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  displayEmailField() {
+    this.props.formType === 'signup';
+  }
+
   renderErrors() {
     return (
       <ul className='error-container'>
@@ -69,11 +74,17 @@ class SessionForm extends React.Component {
                      className='login_input'
                      placeholder='username' />
               <input type='text'
+                     value={this.state.email}
+                     onChange={this.update('email')}
+                     className='login_input'
+                     placeholder='email'
+                     hidden={this.displayEmailField()} />
+              <input type='text'
                      value={this.state.password}
                      onChange={this.update('password')}
                      className='login_input'
                      placeholder='password' />
-            <input type='submit' value='Submit' />
+              <input type='submit' value='Submit' />
           </div>
         </form>
       </div>
