@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
   }
 
   displayEmailField() {
-    this.props.formType === 'signup';
+    return this.props.formType !== 'signup';
   }
 
   renderErrors() {

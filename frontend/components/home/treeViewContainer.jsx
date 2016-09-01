@@ -9,7 +9,7 @@ class TreeViewContainer extends React.Component {
   render() {
     return (
       <div>
-        // TODO: Add ChannelsContainer
+        <ChannelsContainer />
         <section className='dm-chats-container'>
           #all dm_chats
         </section>

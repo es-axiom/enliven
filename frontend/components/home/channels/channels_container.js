@@ -5,6 +5,10 @@ const mapStateToProps = state => ({
   channels: state.channels
 });
 
+const mapDispatchToProps = dispatch => ({
+
+});
+
 export default connect(
   mapStateToProps
 )(ChannelsIndex);
