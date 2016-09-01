@@ -37,9 +37,9 @@ class AppRouter extends React.Component {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={SplashPageContainer} />
-          <Route path='/login' component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn} />
-          <Route path='/signup' component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn} />
-          <Route path='/home' component={ HomeContainer } onEnter={this._requestTeam} />
+          <Route path='/login' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
+          <Route path='/signup' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
+          <Route path='/home' component={ HomeContainer } onEnter={ this._requestTeam } />
         </Route>
       </Router>
     )

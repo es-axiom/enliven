@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveCurrentTeam: dispatch(fetchTeam(1))
+  receiveCurrentTeam: () => dispatch(fetchTeam(1))
 });
 
 export default connect(
