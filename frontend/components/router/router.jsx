@@ -21,14 +21,14 @@ class AppRouter extends React.Component {
   }
 
   _redirectIfLoggedIn(nextState, replace){
-    debugger
     const currentUser = this.props.currentUser;
     if (currentUser) {
      replace('/');
     }
   }
 
-  _requestTeam() {
+  _requestTeam(nextState, replace) {
+    debugger
     fetchTeam(1);
   }
 
