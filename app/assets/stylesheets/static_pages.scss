@@ -6,7 +6,7 @@
   margin: auto;
   text-align: center;
   vertical-align: center;
-  background-color: whitesmoke;
+  background-color: white;
   .Overlay-quote {
     padding: 30px;
     margin-top: 150px;
@@ -28,8 +28,8 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: #b1613c;
-  border-bottom: 4px solid #eaddc5;
+  background-color: #8C4006;
+  border-bottom: 4px solid white;
   justify-content: space-between;
   min-width: 900px;
 }
@@ -44,7 +44,7 @@
 .navbar-list {
   li {
     color: white;
-    border-right: 1px solid gray;
+    border-right: 1px solid white;
     display: block;
     float: left;
     padding: 20px;
@@ -61,8 +61,8 @@
   width: 100%;
   min-width: 900px;
   display: block;
-  background-color: #b1613c;
-  border-top: 2px solid #eaddc5;
+  background-color: #8C4006;
+  border-top: 2px solid white;
   text-align: right;
   color: white;
   div {

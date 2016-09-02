@@ -4,11 +4,12 @@ import { fetchTeam } from '../../../actions/team_actions';
 import { receiveCurrentTeam } from '../../../reducers/team_reducer';
 
 const mapStateToProps = state => ({
-  team: state.team.team
+  team: state.team.team,
+  currentUser: state.session.user
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveCurrentTeam: () => dispatch(fetchTeam(1))
+  receiveCurrentTeam: team => dispatch(fetchTeam(team))
 });
 
 export default connect(

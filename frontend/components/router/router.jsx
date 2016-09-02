@@ -4,7 +4,8 @@ import App from '../app';
 import SessionFormContainer from '../session_form/session_form_container';
 import SplashPageContainer from '../splashpage/splashpage_container';
 import HomeContainer from '../home/home_container';
-import { fetchTeam } from '../../actions/team_actions';
+import AboutContainer from '../about/about_container';
+import ContactContainer from '../contact/contact_container';
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -23,12 +24,8 @@ class AppRouter extends React.Component {
   _redirectIfLoggedIn(nextState, replace){
     const currentUser = this.props.currentUser;
     if (currentUser) {
-     replace('/');
+     replace('/home');
     }
-  }
-
-  _requestTeam(nextState, replace) {
-    fetchTeam(1);
   }
 
   render() {
@@ -36,9 +33,9 @@ class AppRouter extends React.Component {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={SplashPageContainer} />
-          <Route path='/login' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
-          <Route path='/signup' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
+          <Route path='/about' component={ AboutContainer } />
           <Route path='/home' component={ HomeContainer } />
+          <Route path='/contact' component={ ContactContainer } />
         </Route>
       </Router>
     )

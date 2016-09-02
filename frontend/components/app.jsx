@@ -7,7 +7,7 @@ const App = ({ children }) => (
     <NavbarContainer />
     { children }
     <footer className='footer-container'>
-      <div>Contact Us</div>
+      <div><Link to='/contact'>Contact Us</Link></div>
     </footer>
   </div>
 )

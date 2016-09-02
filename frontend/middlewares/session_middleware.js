@@ -5,6 +5,7 @@ import { login, signup, logout }
 
 export default ({ getState, dispatch }) => next => action => {
   const successCB = user => dispatch(receiveCurrentUser(user));
+  //TODO: add success callback for logout action
   const errorCB = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));

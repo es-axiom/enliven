@@ -1,5 +1,6 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import AppRouter from './router';
+import AboutDetails from './about_details';
 
 const mapStateToProps = state => ({
   currentUser: state.session.user
@@ -7,4 +8,4 @@ const mapStateToProps = state => ({
 
 export default connect (
   mapStateToProps
-)(AppRouter);
+)(AboutDetails);

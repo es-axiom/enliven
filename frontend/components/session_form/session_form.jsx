@@ -33,19 +33,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({user});
-  }
-
-  navLink() {
-    if(this.props.formType === 'login') {
-      return <Link className='link' to="/signup">sign up instead</Link>;
-    } else {
-      return <Link className='link' to="/login">log in instead</Link>;
-    }
+    this.props.processForm({user})
+    this.props.closeModal();
   }
 
   displayEmailField() {
-    return this.props.formType !== 'signup';
+    return this.props.formType !== 'Sign Up';
   }
 
   renderErrors() {
@@ -65,7 +58,6 @@ class SessionForm extends React.Component {
       <div className='login_form_container'>
         <form onSubmit={this.handleSubmit} className='login_form_box'>
           Welcome To Enliven!
-          Please { this.props.formType } or { this.navLink() }
           { this.renderErrors() }
           <div className='login_form group'>
               <input type='text'
