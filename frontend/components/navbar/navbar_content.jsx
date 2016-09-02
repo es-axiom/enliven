@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, Button } from 'react-router';
+import { Link } from 'react-router';
 
 class NavbarContent extends React.Component {
 
   login_or_logout(bool) {
     if(bool) {
       return (
-        <li><Button onClick={ this.props.logout } text='Logout' /></li>
+        <li><button onClick={ this.props.logout } value='Logout' /></li>
       )
     } else {
       return (

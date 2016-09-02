@@ -28,7 +28,6 @@ class AppRouter extends React.Component {
   }
 
   _requestTeam(nextState, replace) {
-    debugger
     fetchTeam(1);
   }
 
@@ -39,7 +38,7 @@ class AppRouter extends React.Component {
           <IndexRoute component={SplashPageContainer} />
           <Route path='/login' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
           <Route path='/signup' component={ SessionFormContainer } onEnter={ this._redirectIfLoggedIn } />
-          <Route path='/home' component={ HomeContainer } onEnter={ this._requestTeam } />
+          <Route path='/home' component={ HomeContainer } />
         </Route>
       </Router>
     )

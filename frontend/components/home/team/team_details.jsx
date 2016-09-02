@@ -3,11 +3,10 @@ import React from 'react';
 const TeamDetails = ({ team }) => {
   return (
     <div className='team-details'>
-      <h2 className='team-details-name'>{team.name}</h2>
+      <h2 className='team-details-name'>Team#Name</h2>
       <ul className='team-details-list'>
-        <li>This will be a details list</li>
-        //TODO: display number of channels
-        //TODO: display number of members
+        <li>1042 Members</li>
+        <li>11 Channels</li>
       </ul>
     </div>
   )

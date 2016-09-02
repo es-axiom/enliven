@@ -28,8 +28,8 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: #5E4C32;
-  border-bottom: 4px solid gray;
+  background-color: #b1613c;
+  border-bottom: 4px solid #eaddc5;
   justify-content: space-between;
   min-width: 900px;
 }
@@ -61,7 +61,8 @@
   width: 100%;
   min-width: 900px;
   display: block;
-  background-color: #5E4C32;
+  background-color: #b1613c;
+  border-top: 2px solid #eaddc5;
   text-align: right;
   color: white;
   div {

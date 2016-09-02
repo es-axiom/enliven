@@ -10,8 +10,6 @@ class TreeView extends React.Component {
     return (
       <div>
         <TeamContainer />
-        // TODO: Add channels container
-        // TODO Add DM chats container
       </div>
     )
   }
