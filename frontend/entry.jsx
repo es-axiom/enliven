@@ -7,19 +7,12 @@ import Modal from 'react-modal';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if(window.currentUser) {
-    const initialState = { session: { user: window.currentUser }};
+    const initialState = { session: { currentUser: window.currentUser }};
     store = configureStore(initialState);
-    debugger;
   } else {
-    debugger
-    const _nullUser = Object.freeze({
-      user: null,
-      errors: []
-    });
-    store = configureStore({ session: _nullUser });
+    store = configureStore();
   }
 
-  console.log(store.getState()); // check if preloadedState for current user is set
   Modal.setAppElement(document.body);
 
   window.Store = store;

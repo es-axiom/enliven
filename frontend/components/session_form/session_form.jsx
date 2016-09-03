@@ -12,10 +12,6 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount() {
-    this.redirectIfLoggedIn();
-  }
-
   componentDidUpdate() {
     this.redirectIfLoggedIn();
   }
@@ -33,9 +29,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({user})
+    debugger;
+    this.props.processForm(user)
     this.props.closeModal();
-    hashHistory.push('/home');
   }
 
   displayEmailField() {
@@ -76,7 +72,7 @@ class SessionForm extends React.Component {
                      className='login_input'
                      placeholder='email'
                      hidden={this.displayEmailField()} />
-              <input type='text'
+              <input type='password'
                      value={this.state.password}
                      onChange={this.update('password')}
                      className='login_input'

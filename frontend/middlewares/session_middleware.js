@@ -3,27 +3,29 @@ import { receiveCurrentUser, receiveErrors, SessionConstants }
 import { login, signup, logout }
   from '../util/session_api_util';
 
-export default ({ getState, dispatch }) => next => action => {
-const successCB = user => {
-  debugger;
-  dispatch(receiveCurrentUser(user));
-};
-  //TODO: add success callback for logout action
-  const errorCB = xhr => {
+export default ({getState, dispatch}) => next => action => {
+  const successCallback = user => {
+    dispatch(receiveCurrentUser(user));
+  };
+  const errorCallback = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
   };
-  switch(action.type) {
+  switch(action.type){
     case SessionConstants.LOGIN:
-      login(action.user, successCB, errorCB);
+      login(action.user, successCallback, errorCallback);
       return next(action);
     case SessionConstants.LOGOUT:
-      logout(() => next(action));
+      logout(() => {
+        //NOTE: setting currentUser to null after logout action
+        window.currentUser = null;
+        next(action);
+      });
       break;
     case SessionConstants.SIGNUP:
-      signup(action.user, successCB, errorCB);
+      signup(action.user, successCallback, errorCallback);
       return next(action);
     default:
       return next(action);
-  }
-};
+    }
+  };

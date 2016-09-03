@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import AppRouter from './router';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.user
+  currentUser: state.session.currentUser
 });
 
 export default connect (

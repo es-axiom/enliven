@@ -5,7 +5,7 @@ export const login = (user, success, error) => {
     method: 'POST',
     url: '/api/session',
     data: user,
-    success,
+    success: success(user),
     error
   });
 };
@@ -22,7 +22,7 @@ export const signup = (user, success, error) => {
 
 export const logout = (success) => {
   $.ajax({
-    method: 'DELETE',
+    method: 'delete',
     url: '/api/session',
     success,
     error: () => {

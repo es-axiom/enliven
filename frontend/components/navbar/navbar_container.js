@@ -4,7 +4,7 @@ import NavbarContent from './navbar_content';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  loggedIn: Boolean(state.session.user)
+  loggedIn: Boolean(state.session.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

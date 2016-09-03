@@ -1,6 +1,13 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 
 class Splashpage extends React.Component {
+  componentWillMount() {
+    if(this.props.currentUser) {
+      hashHistory.push('/home')
+    }
+  }
+
   greetingMessage() {
     if(this.props.currentUser) {
       return 'What is your team up to?'

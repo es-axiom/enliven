@@ -6,14 +6,14 @@ export const SessionConstants = {
   RECEIVE_ERRORS: "RECEIVE_ERRORS"
 };
 
-export const signup = user => ({
+export const signup = currentUser => ({
   type: SessionConstants.SIGNUP,
-  user
+  currentUser
 });
 
-export const login = user => ({
+export const login = currentUser => ({
   type: SessionConstants.LOGIN,
-  user
+  currentUser
 });
 
 export const logout = () => ({
