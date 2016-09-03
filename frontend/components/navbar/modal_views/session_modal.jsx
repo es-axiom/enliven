@@ -15,12 +15,17 @@ class SessionModal extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  _handleClick(isLogin) {
-    if(isLogin === 'Logout') {
-      // this.props.logout();
-    } else {
-      this.setState({ loginOrNot: true,
+  _handleClick(formType) {
+    if(formType === 'signup') {
+      this.setState({ formType: 'signup',
                       modalOpen: true });
+    }
+    if(formType === 'login') {
+      this.setState({ formType: 'login',
+                      modalOpen: true });
+    }
+    if(formType === 'logout'){
+      console.log('hit it');
     }
   }
 
@@ -28,39 +33,19 @@ class SessionModal extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  loginOrLogout(currentUser) {
-    if(currentUser) {
-      return 'Logout';
+  loginOrLogout() {
+    if(this.props.currentUser) {
+      return 'logout';
     } else {
-      return 'Login';
+      return 'login';
     }
   }
 
-  loginOrSignup() {
-    if(this.state.loginOrNot) {
-      return 'Login'
+  signUp() {
+    if(this.props.currentUser) {
+      return '';
     } else {
       return 'Sign Up'
-    }
-  }
-
-  lOrS() {
-    if(this.state.loginOrNot) {
-      return 'signup';
-    } else {
-      return 'login'
-    }
-  }
-
-  otherActionButton() {
-    if(this.state.loginOrNot) {
-      return (<button onClick={() => this.setState({ loginOrNot: false })}>
-              Sign Up Instead
-             </button>)
-    } else {
-      return (<button onClick={() => this.setState({ loginOrNot: true })}>
-              Login Instead
-             </button>)
     }
   }
 
@@ -68,15 +53,17 @@ class SessionModal extends React.Component {
     return (
       <div>
         <button onClick={ this._handleClick.bind(this, this.loginOrLogout()) }>
-          { this.loginOrLogout() }
+          { this.loginOrLogout().toUpperCase() }
+        </button>
+        <button onClick={ this._handleClick.bind(this, 'signup') }>
+          { this.signUp().toUpperCase() }
         </button>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={ this.onModalClose }
           style={ LoginStyle }>
-          <h2>Please { this.loginOrSignup() }, or { this.otherActionButton() }</h2>
           <button onClick={ this.onModalClose }>close</button>
-          <SessionFormContainer formType={ this.lOrS() } closeModal={ this.onModalClose.bind(this) } />
+          <SessionFormContainer formType={ this.state.formType } closeModal={ this.onModalClose.bind(this) } />
         </Modal>
       </div>
     )

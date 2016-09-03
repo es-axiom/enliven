@@ -35,10 +35,15 @@ class SessionForm extends React.Component {
     const user = this.state;
     this.props.processForm({user})
     this.props.closeModal();
+    hashHistory.push('/home');
   }
 
   displayEmailField() {
-    return this.props.formType !== 'Sign Up';
+    if(this.props.formType === 'login') {
+      return true; //hidden
+    } else {
+      return false; //showing
+    }
   }
 
   renderErrors() {

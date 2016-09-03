@@ -4,8 +4,6 @@ import App from '../app';
 import SessionFormContainer from '../session_form/session_form_container';
 import SplashPageContainer from '../splashpage/splashpage_container';
 import HomeContainer from '../home/home_container';
-import AboutContainer from '../about/about_container';
-import ContactContainer from '../contact/contact_container';
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -17,7 +15,7 @@ class AppRouter extends React.Component {
   _ensureLoggedIn(nextState, replace){
     const currentUser = this.props.currentUser;
     if (!currentUser) {
-     replace('/login');
+     replace('/');
     }
   }
 
@@ -32,10 +30,8 @@ class AppRouter extends React.Component {
     return (
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
-          <IndexRoute component={SplashPageContainer} />
-          <Route path='/about' component={ AboutContainer } />
-          <Route path='/home' component={ HomeContainer } />
-          <Route path='/contact' component={ ContactContainer } />
+          <IndexRoute component={ SplashPageContainer } onEnter={ this._redirectIfLoggedIn }/>
+          <Route path='/home' component={ HomeContainer } onEnter={ this._ensureLoggedIn }/>
         </Route>
       </Router>
     )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SessionModal from './modal_views/session_modal';
+import AboutModal from './modal_views/about_modal';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({

@@ -4,7 +4,10 @@ import { login, signup, logout }
   from '../util/session_api_util';
 
 export default ({ getState, dispatch }) => next => action => {
-  const successCB = user => dispatch(receiveCurrentUser(user));
+const successCB = user => {
+  debugger;
+  dispatch(receiveCurrentUser(user));
+};
   //TODO: add success callback for logout action
   const errorCB = xhr => {
     const errors = xhr.responseJSON;
