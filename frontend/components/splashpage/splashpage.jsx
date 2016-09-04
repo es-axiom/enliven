@@ -2,28 +2,14 @@ import React from 'react';
 import { hashHistory } from 'react-router';
 
 class Splashpage extends React.Component {
-  componentWillMount() {
-    if(this.props.currentUser) {
-      hashHistory.push('/home')
-    }
-  }
-
-  greetingMessage() {
-    if(this.props.currentUser) {
-      return 'What is your team up to?'
-    } else {
-      return 'Stick with your team anywhere you go.'
-    }
-  }
 
   render() {
     return (
       <div className="Overlay">
         <div className="Overlay-quote">
-          <span className="Overlay-quote-text">{ this.greetingMessage() }</span>
+          <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
         </div>
         <div className="Overlay-Team-Finder">
-          <h3>Find Your Team</h3>
         </div>
       </div>
     )

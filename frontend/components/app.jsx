@@ -4,7 +4,9 @@ import NavbarContainer from './navbar/navbar_container';
 
 const App = ({ children }) => (
   <div>
-    <NavbarContainer />
+    <header>
+      <NavbarContainer />
+    </header>
     { children }
     <footer className='footer-container'>
       <div><Link to='/contact'>Contact Us</Link></div>

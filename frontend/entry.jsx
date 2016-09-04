@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/configureStore';
-import Modal from 'react-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
-  if(window.currentUser) {
-    const initialState = { session: { currentUser: window.currentUser }};
-    store = configureStore(initialState);
+  if (window.currentUser) {
+    const initialState = {session: {currentUser: window.currentUser}};
+    store = window.store = configureStore(initialState);
   } else {
-    store = configureStore();
+    store = window.store = configureStore();
   }
-
-  Modal.setAppElement(document.body);
 
   window.Store = store;
   const root = document.getElementById('root');
-  ReactDOM.render(<Root store={store} />, root);
-})
+  ReactDOM.render(<Root store={store}/>, root);
+});

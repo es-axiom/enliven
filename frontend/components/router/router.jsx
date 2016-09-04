@@ -2,37 +2,41 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from '../app';
 import SessionFormContainer from '../session_form/session_form_container';
-import SplashPageContainer from '../splashpage/splashpage_container';
 import HomeContainer from '../home/home_container';
+import SplashPageContainer from '../splashpage/splashpage_container';
 
-class AppRouter extends React.Component {
-  constructor(props) {
+class AppRouter extends React.Component{
+  constructor(props){
     super(props);
     this._ensureLoggedIn = this._ensureLoggedIn.bind(this);
     this._redirectIfLoggedIn = this._redirectIfLoggedIn.bind(this);
   }
 
   _ensureLoggedIn(nextState, replace){
-    if(!this.props.currentUser) {
-     replace('/');
+    const currentUser = this.props.currentUser;
+    if (!currentUser) {
+      replace('/login');
     }
   }
 
   _redirectIfLoggedIn(nextState, replace){
-    if(this.props.currentUser) {
-     replace('/home');
+    const currentUser = this.props.currentUser;
+    if (currentUser) {
+      replace('/home');
     }
   }
 
-  render() {
-    return (
+  render(){
+    return(
       <Router history={ hashHistory }>
-        <Route path="/" component={ App } >
-          <IndexRoute component={ SplashPageContainer } />
-          <Route path='/home' component={ HomeContainer } onEnter={ this._ensureLoggedIn }/>
+        <Route path="/" component={ App }>
+          <IndexRoute component={ SplashPageContainer } onEnter={this._redirectIfLoggedIn }/>
+          <Route path="/login" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>
+          <Route path="/signup" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>
+          <Route path="/home" component={ HomeContainer } onEnter={ this._ensureLoggedIn } />
         </Route>
       </Router>
-    )
+    );
   }
 }
 
