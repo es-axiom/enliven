@@ -22,8 +22,7 @@
 }
 
 .navbar {
-  background-color: #8C4006;
-  border-bottom: 4px solid white;
+  border-bottom: 2px solid white;
   .navbar-link {
     display: flex;
     justify-content: space-between;
@@ -46,6 +45,35 @@
   }
 }
 
+.navbar-logged-in {
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  .header-static {
+    display: flex;
+    justify-content: space-between;
+    li {
+      color: white;
+      padding: 20px;
+    }
+  }
+  .header-group {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      padding: 20px;
+      color: white;
+    }
+    button {
+      padding: 20px;
+      color: white;
+    }
+    button:hover {
+      color: black;
+      background-color: white;
+    }
+  }
+}
 
 .login-form-container {
   background-color: whitesmoke;
@@ -56,7 +84,7 @@
   width: 350px;
   margin-top: 10%;
   .login-form-box {
-    background-color: #8C4006;
+    background-color: #95B1CD;
     padding: 20px;
   }
   .login-form {
@@ -83,7 +111,6 @@
   width: 100%;
   min-width: 900px;
   display: block;
-  background-color: #8C4006;
   border-top: 2px solid white;
   text-align: right;
   color: white;

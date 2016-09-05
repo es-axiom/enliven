@@ -20,10 +20,10 @@ TeamMembership.create(user_id: 3, team_id: 2)
 TeamMembership.create(user_id: 1, team_id: 2)
 TeamMembership.create(user_id: 4, team_id: 3)
 
-120.times do |i|
+20.times do
   Channel.create(
     name: Faker::University.name,
-    team_id: (i % 4),
+    team_id: rand(10),
     status: Faker::Company.catch_phrase
   )
 end

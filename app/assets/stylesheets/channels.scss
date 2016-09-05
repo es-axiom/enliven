@@ -1,3 +1,29 @@
 // Place all the styles related to the Channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.channels-box {
+  margin-left: 10px;
+  background-color: #DCE9EE;
+  width: 18%;
+  height: 30%;
+  overflow: hidden;
+  h3 {
+    padding: 5px 0 5px 0;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+  }
+  li {
+    padding: 10px;
+    text-align: left;
+    font-weight: 300;
+  }
+  li:hover {
+    transform: scaleX(1.04) scaleY(1.04);
+    background-color: white;
+    font-weight: 400px;
+    cursor: pointer;
+  }
+}

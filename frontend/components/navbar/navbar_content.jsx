@@ -22,8 +22,8 @@ const sessionLinks = () => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-  <div className='navbar'>
-    <NavBarStatic />
+  <div className='navbar-logged-in'>
+    <NavBarStatic className='navbar-logged-in-static'/>
   	<hgroup className="header-group">
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
   		<button className="header-button" onClick={logout}>Log Out</button>
