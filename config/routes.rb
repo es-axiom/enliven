@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :session
     resources :teams
     resources :channels
+    resources :dm_chats
   end
 
   root 'static_pages#root'

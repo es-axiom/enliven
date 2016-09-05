@@ -3,7 +3,8 @@ import TreeView from './treeview';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  currentUser: state.session.currentUser,
+  currentTeam: state.session.currentTeam
 })
 
 export default connect (
