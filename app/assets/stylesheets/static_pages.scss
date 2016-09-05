@@ -50,22 +50,27 @@
 .login-form-container {
   background-color: whitesmoke;
   border-radius: 3%;
-  border: 3px solid grey;
+  border: 3px solid white;
   margin: auto;
   height: auto;
   width: 350px;
   margin-top: 10%;
   .login-form-box {
-    background-color: white;
+    background-color: #8C4006;
     padding: 20px;
   }
   .login-form {
     input {
       margin: 10px;
       padding: 20px;
-      width: 200px;
-      border: 2px solid gray;
-      border-radius: 10%;
+      width: 280px;
+      border-radius: 3%;
+      background-color: white;
+      font-size: 18px;
+    }
+    .submit-login-button {
+      width: 100px;
+      font-size: 16px;
     }
   }
 }

@@ -28,7 +28,6 @@
 | id | integer | not null, primary key |
 | name | string | not null, indexed |
 | team_id | integer | not null, foreign key (references _team_) |
-| user_id | integer | not null, foreign key (references _user_, refers to creator) |
 | status | string | |
 
 -------------------

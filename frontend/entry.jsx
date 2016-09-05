@@ -6,7 +6,8 @@ import configureStore from './store/configureStore';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    const initialState = {session: {currentUser: window.currentUser}};
+    const initialState = {session: {currentUser: window.currentUser},
+                          team: { currentTeam: null }};
     store = window.store = configureStore(initialState);
   } else {
     store = window.store = configureStore();

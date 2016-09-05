@@ -4,7 +4,8 @@ import SessionMiddleware from './session_middleware';
 import TeamMiddleware from './team_middleware';
 
 const RootMiddleware = applyMiddleware(
-  SessionMiddleware
+  SessionMiddleware,
+  TeamMiddleware
 );
 
 export default RootMiddleware;

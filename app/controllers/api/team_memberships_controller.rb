@@ -4,12 +4,12 @@ class Api::TeamMembershipsController < ApplicationController
     if @tm
       render 'api/team/show'
     else
-      render json: ['Could not craete association'], status: 404
+      render json: ['Could not create association'], status: 404
     end
   end
 
   def destroy
-    @tm = TeamMembership.find_by_id(params[:team_membership_id])
+    @tm = TeamMembership.find_by_id(params[:id])
+    @tm.destroy
   end
-  
 end

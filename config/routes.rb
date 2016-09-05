@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resource :session
     resources :teams
+    resources :channels
   end
 
   root 'static_pages#root'
