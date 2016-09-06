@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchChatMessages: (channel_id) => dispatch(fetchChatMessages(channel_id))
+  fetchChatMessages: channel_id => dispatch(fetchChatMessages(channel_id))
 });
 
 

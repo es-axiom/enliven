@@ -10,12 +10,13 @@ const _nullData = Object.freeze({
 const ChannelReducer = (state = _nullData, action) => {
   switch(action.type) {
     case ChannelConstants.RECEIVE_TEAM_CHANNELS:
-      const teamChannels = action.teamChannels;
-      return merge({}, _nullData, { teamChannels });
+      let teamChannels = action.teamChannels;
+      let messages = state.messages;
+      return merge({}, _nullData, { teamChannels, messages });
     case ChannelConstants.RECEIVE_CHAT_MESSAGES:
-      const messages = action.messages;
-      debugger;
-      return merge({}, _nullData, { messages });
+      messages = action.messages;
+      teamChannels = state.teamChannels;
+      return merge({}, _nullData, { teamChannels, messages });
     case ChannelConstants.RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, _nullData, { errors });

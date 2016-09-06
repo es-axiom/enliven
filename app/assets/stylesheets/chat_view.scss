@@ -1,3 +1,16 @@
 .chat-view-container {
-  
+  background-color: white;
+}
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  border-top: 1px solid #ccc;
+  li:first-of-type {
+    width: 10%;
+  }
+  li:last-of-type {
+    width: 90%;
+  }
 }

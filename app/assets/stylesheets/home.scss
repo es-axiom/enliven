@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   .treeView {
-    width: 20%
+    width: 25%
   }
   .chatView {
     width: 75%;
@@ -69,6 +69,7 @@
   background-color: #224c74;
   display: flex;
   flex-direction: column;
+  height: auto;
   li button {
     width: 100%;
     color: white;

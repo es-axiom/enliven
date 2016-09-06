@@ -13,6 +13,9 @@ class Splashpage extends React.Component {
           <li><Link to='/home'>Home</Link></li>
           <li><p>Add Team Search Container here</p></li>
         </ul>
+        <footer className='footer-container'>
+          <div><Link to='/contact'>Contact Us</Link></div>
+        </footer>
       </div>
     )
   }

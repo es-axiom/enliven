@@ -8,9 +8,6 @@ const App = ({ children }) => (
       <NavbarContainer />
     </header>
     { children }
-    <footer className='footer-container'>
-      <div><Link to='/contact'>Contact Us</Link></div>
-    </footer>
   </div>
 )
 

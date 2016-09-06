@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
 gem 'faker', '1.6.6'
+gem 'pusher'
 
 group :development, :test do
   gem 'byebug'
