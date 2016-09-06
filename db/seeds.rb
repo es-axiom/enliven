@@ -37,3 +37,7 @@ end
     dm_chat_id: rand(40)
   )
 end
+
+400.times do
+  Message.create(content: Faker::StarWars.quote)
+end
