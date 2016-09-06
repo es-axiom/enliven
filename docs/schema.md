@@ -21,6 +21,17 @@
 
 -------------------
 
+##team_memberships##
+
+| column_name | data type | details |
+| ----------- | --------- | ------- |
+| id | integer | not null, primary key |
+| moderator | boolean | default: false |
+| team_id | integer | not null, foreign_key (references team) |
+| user_id | integer | not null, foreign_key (references user) |
+
+-------------------
+
 ##channels##
 
 | column_name | data type | details |
@@ -32,15 +43,41 @@
 
 -------------------
 
+##chats##
+
+| column_name | data type | details |
+| ----------- | --------- | ------- |
+| id | integer | not null, primary key |
+| channel_id | integer | not null, foreign key (references channel) |
+
+-------------------
+
 ##dm_chats##
 
 | column_name | data type | details |
 | ----------- | --------- | ------- |
 | id | integer | not null, primary key |
-| title | string | not null, indexed |
-| user_one_id | integer | not null, foreign key (references _user1_) |
-| user_two_id | integer | not null, foreign key (references _user2_) |
-| searchable | boolean | default: true |
+
+-------------------
+
+##dms##
+
+| column_name | data type | details |
+| ----------- | --------- | ------- |
+| id | integer | not null, primary key |
+| content | string | not null |
+| dm_chat_id | integer | not null, foreign key (references dm_chat) |
+| user_id | integer | not null, foreign key (references user) |
+
+-------------------
+
+##dm_subs##
+
+| column_name | data type | details |
+| ----------- | --------- | ------- |
+| id | integer | not null, primary key |
+| dm_chat_id | integer | not null, foreign key (references dm_chat) |
+| user_id | integer | not null, foreign key (references user) |
 
 -------------------
 
@@ -49,6 +86,6 @@
 | column_name | data type | details |
 | ----------- | --------- | ------- |
 | id | integer | not null, primary key |
-| chat_id | integer | not null, foreign key (references _channel_ or _DM_) |
-| author_id | integer | not null, foreign key (references _user_) |
-| content | text | not null |
+| content | string | not null |
+| chat_id | integer | foreign_key (references chat) |
+| user_id | integer | foreign_key (references user) |

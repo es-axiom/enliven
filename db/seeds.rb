@@ -17,27 +17,23 @@ end
   TeamMembership.create(user_id: i, team_id: rand(9))
 end
 
-20.times do
+(1..25).each do |i|
   Channel.create(
     name: Faker::University.name,
     team_id: rand(10),
     status: Faker::Company.catch_phrase
+    chat_id: i
   )
 end
 
-40.times do
+(25..75).each do |i|
   DmChat.create(
-    title: Faker::App.name
-  )
-end
-
-50.times do
-  ChatSubscription.create(
-    user_id: rand(15),
-    dm_chat_id: rand(40)
+    title: Faker::App.name,
+    chat_id: i
   )
 end
 
 400.times do
-  Message.create(content: Faker::StarWars.quote)
+  msg = Message.create(content: Faker::StarWars.quote, user_id: rand(30))
+  ChatPost.create(message_id: msg.id, )
 end

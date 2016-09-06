@@ -11,8 +11,10 @@ class User < ActiveRecord::Base
 
   has_many :team_memberships
   has_many :teams, through: :team_memberships
-	has_many :chat_subscriptions
-	has_many :dm_chats, through: :chat_subscriptions
+	has_many :mod_memberships
+	has_many :dms
+	has_many :dm_subs
+	has_many :messages
 
   def password= password
 		self.password_digest = BCrypt::Password.create(password)
