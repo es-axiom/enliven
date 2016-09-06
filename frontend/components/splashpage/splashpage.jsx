@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { Link } from 'react-router';
 
 class Splashpage extends React.Component {
 
@@ -9,8 +9,10 @@ class Splashpage extends React.Component {
         <div className="Overlay-quote">
           <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
         </div>
-        <div className="Overlay-Team-Finder">
-        </div>
+        <ul className="Overlay-list">
+          <li><Link to='/home'>Home</Link></li>
+          <li><p>Add Team Search Container here</p></li>
+        </ul>
       </div>
     )
   }
