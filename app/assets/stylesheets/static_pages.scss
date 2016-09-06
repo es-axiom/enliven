@@ -144,11 +144,15 @@
   border-top: 2px solid white;
   text-align: right;
   color: white;
-  div {
+  height: auto;
+  div a {
     padding: 20px;
     color: white;
   }
-  div:hover {
+  div {
+    padding: 20px;
+  }
+  div a:hover {
     color: black;
     background-color: white;
   }

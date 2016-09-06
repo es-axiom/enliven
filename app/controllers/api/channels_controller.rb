@@ -9,7 +9,14 @@ class Api::ChannelsController < ApplicationController
   end
 
   def index
-    @channels = Team.find_by_id(params[:team_id]).channels
+    @messages = []
+    @channels = []
+    if params[:info]
+      chat = Channel.find_by_id(params[:info]).chat
+      @messages = chat.messages
+    else
+      @channels = Team.find_by_id(params[:team_id]).channels
+    end
     render 'api/channels/index'
   end
 

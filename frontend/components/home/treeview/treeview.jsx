@@ -7,7 +7,7 @@ class TreeView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='tree-view-container'>
         <TeamContainer />
         <ChannelContainer />
         <DMChatContainer />

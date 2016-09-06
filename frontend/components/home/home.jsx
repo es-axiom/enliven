@@ -4,10 +4,14 @@ import ChatViewContainer from './chatview/chatview_container';
 
 const Home = () => {
   return (
-    <section className="treeView">
-      <TreeViewContainer />
-      <ChatViewContainer />
-    </section>
+    <div className='home-container'>
+      <section className="treeView">
+        <TreeViewContainer />
+      </section>
+      <section className='chatView'>
+        <ChatViewContainer />
+      </section>
+    </div>
   )
 }
 

@@ -1,0 +1,90 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  .treeView {
+    width: 20%
+  }
+  .chatView {
+    width: 75%;
+  }
+}
+
+.tree-view-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+// Team Details
+.team-details {
+  background-color: #DCE9EE;
+  height: 100%;
+  .team-details-name {
+    color: gray;
+    font-size: 18px;
+    padding: 12px 12px 8px 20px;
+  }
+  .team-details-list {
+    li {
+      color: black;
+      padding-bottom: 10px;
+      margin-left: 28px;
+      font-size: 12px;
+    }
+  }
+}
+.team-details:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+// Channel index
+.channels-box {
+  background-color: #DCE9EE;
+  height: 30%;
+  overflow: hidden;
+  padding: 30px;
+  h3 {
+    padding: 5px 0 5px 0;
+    margin: auto;
+    color: gray;
+    font-size: 12px;
+  }
+  li {
+    padding: 10px;
+    text-align: left;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  li:hover {
+    transform: scaleX(1.04) scaleY(1.04);
+    background-color: white;
+    font-weight: 400px;
+    cursor: pointer;
+  }
+}
+
+// DmChatIndex
+.dm-chat-container {
+  background-color: #224c74;
+  display: flex;
+  flex-direction: column;
+  li button {
+    width: 100%;
+    color: white;
+    padding: 5px;
+    padding-left: 40px;
+  }
+  li button:hover {
+    cursor: pointer;
+    transform: scaleX(1.05) scaleX(1.05);
+    background-color: #DCE9EE;
+    color: black;
+  }
+  h3 {
+    padding: 5px;
+    font-size: 12px;
+    color: #ccc;
+    padding-left: 30px;
+  }
+}

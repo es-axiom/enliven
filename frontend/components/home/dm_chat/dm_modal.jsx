@@ -37,6 +37,7 @@ class DmModal extends React.Component {
   }
 
   render() {
+    // TODO: Add DmChat to Modal
     return (
       <div>
         <button onClick={this.openModal}>...dm_chat...</button>
