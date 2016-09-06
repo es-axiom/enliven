@@ -19,21 +19,26 @@
     flex-direction: row;
     justify-content: center;
     li {
-    width: 50%;
+      border-top: 4px solid #ccc;
+      width: 50%;
     }
     li p{
-      padding: 120px;
+      padding: 80px;
       display: block;
       background-color: whitesmoke;
       text-align: center;
       font-size: 18px;
     }
     li a {
-      padding: 120px;
+      padding: 80px;
       display: block;
       background-color: whitesmoke;
       text-align: center;
-      font-size: 18px;
+      font-size: 24px;
+      border-right: 2px solid #ccc;
+    }
+    li a:hover {
+      transform: scaleX(1.05) scaleY(1.05);
     }
   }
 }
