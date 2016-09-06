@@ -22,6 +22,7 @@ class ChannelIndex extends React.Component {
   }
 
   render() {
+    // TODO: Add TeamDetailModal to display 2 tabs, detail and team members
     return (
       <section className='channels-box'>
         <h3>Team Channels</h3>

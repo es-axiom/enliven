@@ -1,1 +1,1 @@
-json.extract! dm_chat, :id, :title
+json.extract! dm_chat, :id

@@ -1,39 +1,47 @@
-20.times do
+
+# Create Teams
+5.times do
+  Team.create(
+    name: Faker::Team.name,
+    description: Faker::Hipster.sentence(5)
+  )
+end
+
+# Create Users
+# Associate users to teams
+(1..40).each do |i|
   User.create(
     username: Faker::StarWars.character,
     email: Faker::Internet.email,
     password: 'password'
   )
+  TeamMembership.create(user_id: i, team_id: rand(5))
 end
 
-10.times do
-  Team.create!(
-    name: Faker::Team.name,
-    description: Faker::Hipster.sentence(9)
+# Create channels with their corresponding chat
+# Seed messages
+25.times do
+  ch = Channel.create(
+    name: Faker::University.name.upcase,
+    team_id: rand(5),
+    status: Faker::Hipster.sentence(10)
   )
+  next unless ch
+  chat = Chat.create(channel_id: ch.id)
+  next unless chat.id
+  25.times do
+    Message.create(
+      content: Faker::StarWars.quote,
+      chat_id: chat.id,
+      user_id: rand(40)
+    )
+  end
 end
 
-(1..20).each do |i|
-  TeamMembership.create(user_id: i, team_id: rand(9))
-end
-
-(1..25).each do |i|
-  Channel.create(
-    name: Faker::University.name,
-    team_id: rand(10),
-    status: Faker::Company.catch_phrase
-    chat_id: i
-  )
-end
-
-(25..75).each do |i|
-  DmChat.create(
-    title: Faker::App.name,
-    chat_id: i
-  )
-end
-
-400.times do
-  msg = Message.create(content: Faker::StarWars.quote, user_id: rand(30))
-  ChatPost.create(message_id: msg.id, )
+# Seed DmChat and Dms, naiive seeds
+(1..40).each do |i|
+  DmChat.create
+  DmSub.create(dm_chat_id: i, user_id: i)
+  DmSub.create(dm_chat_id: 40 - i, user_id: i)
+  Dm.create(dm_chat_id: i, user_id: i, content: 'My first messages')
 end

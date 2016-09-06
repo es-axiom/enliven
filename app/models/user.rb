@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 	has_many :mod_memberships
 	has_many :dms
 	has_many :dm_subs
+	has_many :dm_chats, through: :dm_subs
 	has_many :messages
 
   def password= password

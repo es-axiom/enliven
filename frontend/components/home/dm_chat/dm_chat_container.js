@@ -4,7 +4,7 @@ import { fetchUserDMChats } from '../../../actions/dm_chat_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  userChats: state.userChats.userDMChats
+  dmChats: state.dmChats.userDMChats
 });
 
 const mapDispatchToProps = dispatch => ({

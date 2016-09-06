@@ -1,13 +1,4 @@
-import { receiveDMChat, receiveUserDMChats } from '../actions/dm_chat_actions';
-
-export const fetchDM = (dm_id, success, error) => {
-  $.ajax ({
-    method: 'GET',
-    url: `/api/dm_chats/${dm_id}`,
-    success,
-    error
-  });
-};
+import { receiveUserDMChats } from '../actions/dm_chat_actions';
 
 export const fetchUserDMChats = (success, error) => {
   $.ajax ({

@@ -1,6 +1,6 @@
 class Api::DmChatsController < ApplicationController
   def create
-    @DM = DmChat.create(dm_params)
+    @dm = DmChat.create(dm_params)
     if @DM
       render 'api/dm_chats/show'
     else
@@ -10,7 +10,7 @@ class Api::DmChatsController < ApplicationController
 
   def index
     @user = current_user
-    @DMs = @user.dm_chats
+    @dm_chats = @user.dm_chats
     render 'api/dm_chats/index'
   end
 

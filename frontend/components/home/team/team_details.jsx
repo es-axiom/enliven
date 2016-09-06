@@ -1,21 +1,29 @@
 import React from 'react';
 
 class TeamDetails extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    this.props.fetchTeam(1);
+    this.props.fetchUserTeams(this.props.currentUser);
+  }
+
+  teamName() {
+    let teamName = "";
+    const userTeams = this.props.userTeams;
+    if(userTeams) {
+      const teamArr = [];
+      for(var index in userTeams) {
+        teamArr.push(userTeams[index]);
+      }
+      teamName = teamArr[0].name;
+    }
+    return teamName;
   }
 
   render() {
-    const teamName = (this.props.currentTeam ? this.props.currentTeam.name : "")
-
     return (
       <div className='team-details'>
         <h2 className='team-details-name'>
-          { teamName }
+          { this.teamName() }
         </h2>
         <ul className='team-details-list'>
           <li>1002 Members</li>

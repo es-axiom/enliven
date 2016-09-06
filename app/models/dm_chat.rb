@@ -1,5 +1,4 @@
 class DmChat < ActiveRecord::Base
-  validates :title, presence: true
 
   has_one :dm_chat
   has_many :dms

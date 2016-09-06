@@ -3,12 +3,14 @@ import SessionReducer from './session_reducer';
 import TeamReducer from './team_reducer';
 import ChannelsReducer from './channel_reducer';
 import DMChatReducer from './dm_chat_reducer';
+import UserReducer from './user_reducer';
 
 const RootReducer = combineReducers ({
   session: SessionReducer,
   team: TeamReducer,
   teamChannels: ChannelsReducer,
-  userChats: DMChatReducer
+  dmChats: DMChatReducer,
+  user: UserReducer
 });
 
 export default RootReducer;

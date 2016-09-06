@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import TeamDetails from './team_details';
-import { fetchTeam } from '../../../actions/team_actions';
+import { fetchUserTeams } from '../../../actions/user_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  currentTeam: state.team.currentTeam
+  userTeams: state.user.userTeams
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchTeam: team => dispatch(fetchTeam(team))
+  fetchUserTeams: user => dispatch(fetchUserTeams(user))
 });
 
 export default connect(
