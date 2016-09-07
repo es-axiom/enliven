@@ -1,8 +1,16 @@
 import React from 'react';
 
 class ChannelIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentChannelId: null
+    }
+  }
+
   componentDidMount() {
-    this.props.fetchTeamChannels(1);
+    this.props.fetchUserTeams
+    this.props.fetchTeamChannels();
   }
 
   teamChannelList() {

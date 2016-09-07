@@ -2,10 +2,6 @@ import React from 'react';
 
 class TeamDetails extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchUserTeams(this.props.currentUser);
-  }
-
   teamName() {
     let teamName = "";
     const userTeams = this.props.userTeams;

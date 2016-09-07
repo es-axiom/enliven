@@ -4,11 +4,14 @@ import ChannelContainer from '../channel/channel_container';
 import DMChatContainer from '../dm_chat/dm_chat_container';
 
 class TreeView extends React.Component {
+  componentWillMount() {
+    this.props.fetchUserTeams();
+  }
 
   render() {
     return (
       <div className='tree-view-container'>
-        <TeamContainer />
+        <TeamContainer userTeams={this.props.userTeams}/>
         <ChannelContainer />
         <DMChatContainer />
       </div>

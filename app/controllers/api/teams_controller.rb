@@ -9,18 +9,13 @@ class Api::TeamsController < ApplicationController
   end
 
   def index
-    if params[:user]
-      @user_teams = User.find_by_id(params[:user][:id]).teams
+    @user = current_user
+    if @user
+      @user_teams = @user.teams
       render 'api/teams/index'
     else
-      render json: ['No team access for non-members'],
-             status: 404
+      render json: ['No teams for this User'], status: 404
     end
-  end
-
-  def show
-    @team = Team.find_by_id(params[:id])
-    render 'api/teams/show'
   end
 
   def destroy

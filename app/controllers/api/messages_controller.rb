@@ -3,6 +3,12 @@ class Api::MessagesController < ApplicationController
     @message = Message.create(message_params)
     if @message
       render 'api/messages/show'
+      # TODO: Finish implementing Pusher
+      Pusher.trigger(
+        'channel_' + channel.id.to_s,
+        'post_message',
+        {}
+      )
     else
       render json: ['could not create message'], status: 404
     end
