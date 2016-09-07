@@ -1,6 +1,6 @@
 # **ENLIVEN** #
 
-[link to Enliven App](enlivenus.herokuapp.com)
+[link to Enliven App](https://enlivenus.herokuapp.com)
 
 ## MVP ##
 
