@@ -3,6 +3,9 @@ import TreeViewContainer from './treeview/treeview_container';
 import ChatViewContainer from './chatview/chatview_container';
 
 class Home extends React.Component {
+  componentDidMount() {
+    this.props.fetchUserTeams()
+  }
 
   render() {
     return (
@@ -11,11 +14,11 @@ class Home extends React.Component {
           <TreeViewContainer />
         </section>
         <section className='chatView'>
-          <ChatViewContainer />
         </section>
       </div>
     )
   }
 }
+          // <ChatViewContainer />
 
 export default Home;

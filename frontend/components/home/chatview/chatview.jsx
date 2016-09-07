@@ -13,9 +13,7 @@ class ChatView extends React.Component {
   renderMessages() {
     const msgArr = [];
     for(var index in this.props.chatMessages) {
-      if(this.props.chatMessages[index].user != null) {
-        msgArr.push(this.props.chatMessages[index])
-      }
+      msgArr.push(this.props.chatMessages[index])
     }
     return msgArr.map ( msg => {
       return (

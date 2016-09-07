@@ -2,8 +2,8 @@ import React from 'react';
 
 class ChannelIndex extends React.Component {
   componentDidMount() {
-    //TODO: receive props.currentTeam in ChannelIndex somehow
-    this.props.fetchTeamChannels(this.props.currentTeam);
+    const team = this.props.team
+    this.props.fetchTeamChannels(1);
   }
 
   teamChannelList() {

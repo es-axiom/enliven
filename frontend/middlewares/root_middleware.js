@@ -4,14 +4,13 @@ import SessionMiddleware from './session_middleware';
 import TeamMiddleware from './team_middleware';
 import ChannelMiddleware from './channel_middleware';
 import DMChatMiddleware from './dm_chat_middleware';
-import UserMiddleware from './user_middleware';
 
+// Took out user middleware
 const RootMiddleware = applyMiddleware(
   SessionMiddleware,
   TeamMiddleware,
   ChannelMiddleware,
-  DMChatMiddleware,
-  UserMiddleware
+  DMChatMiddleware
 );
 
 export default RootMiddleware;

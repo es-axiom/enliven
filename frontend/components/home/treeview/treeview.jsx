@@ -1,54 +1,41 @@
 import React from 'react';
-import TeamContainer from '../team/team_container';
 import ChannelContainer from '../channel/channel_container';
 import DMChatContainer from '../dm_chat/dm_chat_container';
+import TeamSelect from './team_select';
 
 class TreeView extends React.Component {
-  componentDidMount() {
-    this.props.fetchUserTeams();
-  }
 
-  teamSelector() {
+  currentTeams() {
+    const userTeams = [this.props.userTeams];
     const teamArr = [];
-    for(var index in userTeams) {
+    for(let index in userTeams) {
       teamArr.push(userTeams[index]);
     }
-    return (
-      <select id="teamSelect" name="teamSelect">
-        { this.teamIndex(teamArr) }
-      </select>
-    )
+    return teamArr;
   }
 
-  teamIndex() {
-    return teamArr.map( team => {
-      <option key={team.id} value={team.id}>{team.name}</option>
-    })
-  }
-
-  selectedTeam() {
-    let e = document.getElementById('teamSelect');
-    return e.options[e.selectedIndex].value;
+  currentTeam() {
+    return this.currentTeams()[0];
   }
 
   render() {
+    let currentTeam = { this.currentTeam() }
+    let no_of_members = currentTeam ? currentTeam.no_of_members : "";
+    let no_of_channels = currentTeam ? currentTeam.no_of_channels : "";
     return (
       <div className='tree-view-container'>
-        // <TeamContainer userTeams={this.props.userTeams}/>
         <div className='team-details'>
-          <h2 className='team-details-name'>
-            { this.selectedTeam().name }
-          </h2>
+          <TeamSelect teamArr={ this.currentTeams() } />
           <ul className='team-details-list'>
-            <li>1002 Members</li>
-            <li>12 Channels</li>
+            <li>{ no_of_members }</li>
+            <li>{ no_of_channels }</li>
           </ul>
         </div>
-        <ChannelContainer userTeams={this.props.userTeams}/>
-        <DMChatContainer />
       </div>
     )
   }
 }
+        // <ChannelContainer team={ currentTeam }/>
+        // <DMChatContainer />
 
 export default TreeView;

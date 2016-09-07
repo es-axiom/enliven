@@ -1,15 +1,6 @@
-import { receiveUserTeams, receiveCurrentTeam, receiveErrors } from '../actions/team_actions';
+import { receiveUserTeams, receiveErrors } from '../actions/team_actions';
 
-export const fetchTeam = (team, success, error) => {
-  $.ajax({
-    method: 'GET',
-    url: `/api/teams/${team}`,
-    success,
-    error
-  });
-};
-
-export const fetchUserTeams = (success, error) => {
+const fetchUserTeams = (success, error) => {
   $.ajax({
     method: 'GET',
     url: '/api/teams',
@@ -17,3 +8,5 @@ export const fetchUserTeams = (success, error) => {
     error
   });
 };
+
+export default fetchUserTeams;
