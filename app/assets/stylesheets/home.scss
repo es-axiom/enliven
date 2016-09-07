@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   .treeView {
-    width: 25%
+    width: 19%
   }
   .chatView {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -33,10 +33,23 @@
     }
   }
 }
-.team-details:hover {
+
+// team select dropdown
+.team-select-form {
+  padding: 20px;
+  .team-select {
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    border-radius: 5%;
+  }
+}
+.team-select-form .team-select:hover {
   background-color: white;
   cursor: pointer;
 }
+
 
 // Channel index
 .channels-box {

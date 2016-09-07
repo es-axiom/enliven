@@ -12,7 +12,11 @@ class TeamSelect extends React.Component {
     let teamList = []
     if(teamArr.length >= 1) {
       teamList = teamArr.map( team => {
-        return <option key={team.id} value={team.id}>{team.name}</option>
+        return (
+          <option className='drop-option' key={team.id} value={team.id}>
+            { team.name + '&#9660'}
+          </option>
+        )
       })
     }
     return teamList;
@@ -35,7 +39,7 @@ class TeamSelect extends React.Component {
     return (
       <div className='team-select-form'>
         <select className='team-select' onSubmit={ this._handleSubmit }>
-          {teamOptions }
+          { teamOptions }
         </select>
       </div>
     )

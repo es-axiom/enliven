@@ -9,12 +9,12 @@
   2. POST /api/users
   3. receiveCurrentUser is the success callback
 
-* sign-in
+* login
   1. invoked from Sign-inForm onSubmit
   2. POST /api/session
   3. receiveCurrentUser is the success callback
 
-* sign-out
+* logout
   1. invoked from the header onSubmit
   2. DELETE /api/session
 
@@ -30,13 +30,6 @@
 ## Message Cycles ##
 
 ###Messages API Request Actions###
-
-* fetchAllMessages
-  1. invoked from Channel or DMChat didMount/willReceiveProps
-  2. GET /api/channels/:id/messages
-    _OR_
-    GET /api/DM_chats/:id/messages
-  3. receiveAllMessages is the success callback
 
 * createMessage
   1. invoked from onSubmit of MessageForm
@@ -54,9 +47,9 @@
 
 ###Messages API Response Actions###
 
-* receiveAllMessages
+* receiveMessage
   1. invoked from API callback
-  2. the MessagesReducer updates Messages in app state
+  2. the MessageReducer adds message to state
 
 * removeMessage
   1. invoked from API callback
@@ -70,11 +63,6 @@
   1. invoked from Team didMount
   2. GET /api/channels/teams/:id
   3. receiveAllChannels is the success callback
-
-* fetchChannel
-  1. invoked from ChannelIndex onClick
-  2. GET /api/channels/:id
-  3. receiveChannel is the success callback
 
 * updateChannel
   1. invoked from UpdateChannelForm onClick
@@ -92,10 +80,6 @@
   1. invoked from API callback
   2. the ChannelsReducer updates channels in app state
 
-* receiveChannel
-  1. invoked from API callback
-  2. the ChannelsReducers updates channel in app state
-
 * removeChannel
   1. invoked from API callback
   2. the ChannelsReducer removes channel from app state
@@ -110,11 +94,6 @@
   2. GET /api/DM_chats/user/:id
   3. receiveAllDM_Chats is the success callback
 
-* fetchDM_Chat
-  1. invoked from DM_Chat onClick
-  2. GET /api/DM_chats/:id
-  3. receiveDM_Chat is the success callback
-
 * destroyDM_Chat
   1. invoked from delete button in DM_Chat
   2. DELETE /api/DM_chats/:id
@@ -125,10 +104,6 @@
 * receiveUserDM_Chats
   1. invoked from API callback
   2. the DM_ChatsReducer updates the DM_Chats in app state
-
-* receiveDM_Chat
-  1. invoked from API callback
-  2. the DM_ChatsReducer updates the DM_Chat in app state
 
 * removeDM_Chat
   1. invoked from API callback
