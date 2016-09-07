@@ -14,11 +14,11 @@ class Home extends React.Component {
           <TreeViewContainer />
         </section>
         <section className='chatView'>
+          <ChatViewContainer />
         </section>
       </div>
     )
   }
 }
-          // <ChatViewContainer />
 
 export default Home;

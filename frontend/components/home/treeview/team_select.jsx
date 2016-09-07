@@ -1,34 +1,41 @@
 import React from 'react';
+import { receiveCurrentTeam } from '../../../actions/team_actions';
 
 class TeamSelect extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      teamList: null
-    }
-    this.teamList = this.teamList.bind(this);
+    this.teamOptions = this.teamOptions.bind(this);
+    this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps() {
-    const teamArr = this.props.teamArr;
-    this.teamList(teamArr);
-  }
-
-  teamList(teamArr) {
-    let teamList = null;
-    if(!!teamArr && !!teamArr[0]) {
+  teamOptions(teamArr) {
+    let teamList = []
+    if(teamArr.length >= 1) {
       teamList = teamArr.map( team => {
-        return <option value={team.id}>{team.name}</option>
+        return <option key={team.id} value={team.id}>{team.name}</option>
       })
     }
-    this.setState({ teamList: teamList });
+    return teamList;
+  }
+
+  _handleSubmit() {
+    let el = document.getElementById('team-select');
+    let cT = e.options[e.selectedIndex].value;
+    this.props.receiveCurrentTeam(cT);
   }
 
   render() {
+    let teamArr = [];
+    if(this.props.teamArr) {
+      teamArr = Object.keys(this.props.teamArr).map( key => {
+        return this.props.teamArr[key];
+      })
+    }
+    const teamOptions = teamArr ? this.teamOptions(teamArr) : [];
     return (
       <div className='team-select-form'>
         <select className='team-select' onSubmit={ this._handleSubmit }>
-          { this.state.teamList }
+          {teamOptions }
         </select>
       </div>
     )

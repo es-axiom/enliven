@@ -1,32 +1,46 @@
-#Component Hierarchy#
+# Component Hierarchy #
 
-##AuthFormContainer##
+##SplashPage##
 
-  * AuthForm
+  * SessionForm
+  * TeamFinderContainer
 
-##GreetingContainer##
+##TeamFinderContainer##
 
-  * ChannelChat
-  * DMIndex
+  * SearchForm
+  * TeamIndexModal
+
+##GreetingPage##
+
+  * TreeViewContainer
+  * ChatViewContainer
+
+##TreeViewContainer##
+
+##TreeView##
+
+  * TeamSelect
+  * ChannelContainer
+  * DMChatContainer
+
+###ChannelContainer###
+
+  * ChannelDetailsModal
   * ChannelIndex
 
-##ChannelChatContainer##
+###DMChatContainer###
 
-  * ChatView
+  * DMIndex
+  * DMChatModal
+
+##ChatViewContainer##
+
+##ChatView##
+
+  * ChatPostContainer
   * MessageForm
 
-##DMIndexContainer##
+###ChatPostContainer###
 
-  * AddDMForm
-  * DMIndex
-
-##ChannelIndexContainer##
-
-  * ChannelIndexItem
-  * AddChannelForm
-
-##SplashpageContainer##
-
-  * AddTeamForm
-  * NavBar
-  * TeamSearchForm
+  * MessageDetails
+  * UserDetails

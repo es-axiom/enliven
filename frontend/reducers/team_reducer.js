@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const _nullTeam = Object.freeze({
   userTeams: null,
+  currentTeam: null,
   errors: []
 });
 
@@ -11,6 +12,9 @@ const TeamReducer = (state = _nullTeam, action) => {
     case TeamConstants.RECEIVE_USER_TEAMS:
       const userTeams = action.teams;
       return merge({}, _nullTeam, { userTeams });
+    case TeamConstants.RECEIVE_CURRENT_TEAM:
+      const currentTeam = action.team;
+      return merge({}, _nullTeam, { currentTeam });
     case TeamConstants.RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, _nullTeam, { errors });
