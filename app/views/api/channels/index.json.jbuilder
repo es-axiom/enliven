@@ -9,8 +9,11 @@ end
 
 unless @messages.empty?
   @messages.each do |msg|
-    json.user msg.user
-    json.content msg.content
-    json.time_posted msg.created_at
+    json.set! msg.id do
+      json.user msg.user
+      json.id msg.id
+      json.content msg.content
+      json.time_posted msg.created_at
+    end
   end
 end

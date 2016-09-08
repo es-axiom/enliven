@@ -23,17 +23,21 @@ class TreeView extends React.Component {
     let no_of_members = currentTeam ? currentTeam.no_of_members : "";
     let no_of_channels = currentTeam ? currentTeam.no_of_channels : "";
     return (
-      <div className='tree-view-container'>
-        <div className='team-details'>
+      <ul className='tree-view-container'>
+        <li className='team-details'>
           <TeamSelect teamArr={ teamArr } />
           <ul className='team-details-list'>
             <li className='team-details-members'>{ no_of_members } Members</li>
             <li className='team-details-channels'>{ no_of_channels } Channels</li>
           </ul>
-        </div>
-        <ChannelContainer currentTeam={ currentTeam }/>
-        <DMChatContainer />
-      </div>
+        </li>
+        <li className='channel-div'>
+          <ChannelContainer currentTeam={ currentTeam }/>
+        </li>
+        <li className='dm-chat-div'>
+          <DMChatContainer />
+        </li>
+      </ul>
     )
   }
 }

@@ -14,7 +14,7 @@ class TeamSelect extends React.Component {
       teamList = teamArr.map( team => {
         return (
           <option className='drop-option' key={team.id} value={team.id}>
-            { team.name + '&#9660'}
+            { team.name }
           </option>
         )
       })

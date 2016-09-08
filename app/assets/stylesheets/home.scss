@@ -1,8 +1,9 @@
 .home-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: stretch;
   .treeView {
-    width: 19%
+    width: 20%;
   }
   .chatView {
     width: 80%;
@@ -10,15 +11,18 @@
 }
 
 .tree-view-container {
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  justify-content: space-between;
+  li {
+    height: 33%;
+  }
 }
 
 // Team Details
 .team-details {
   background-color: #DCE9EE;
-  height: 100%;
   .team-details-name {
     color: gray;
     font-size: 18px;
@@ -32,6 +36,11 @@
       font-size: 12px;
     }
   }
+}
+.channel-div {
+}
+
+.dm-chat-div {
 }
 
 // team select dropdown
@@ -54,9 +63,6 @@
 // Channel index
 .channels-box {
   background-color: #DCE9EE;
-  height: 30%;
-  overflow: hidden;
-  padding: 30px;
   h3 {
     padding: 5px 0 5px 0;
     margin: auto;
@@ -64,10 +70,13 @@
     font-size: 12px;
   }
   li {
-    padding: 10px;
+    padding: 10px 30px;
     text-align: left;
     font-weight: 300;
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   li:hover {
     transform: scaleX(1.04) scaleY(1.04);
