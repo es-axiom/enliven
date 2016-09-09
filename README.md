@@ -6,12 +6,10 @@
 
 _Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rails and React - Redux. By the end of Week 9 at App Academy, this app will satisfy the criteria outlined below with intuitive and effortless navigation, while engaging the user in a well-designed experience.
  * Hosting on Heroku
- * Account creation, management, login
+ * Account creation, login
  * Guest/Demo login
- * Team creation, management
- * Channel chat/Message mentions
+ * Channel chat
  * Direct Messages/Multi-Person DM
- * User notifications
 
 ## Implementation Timeline ##
 
