@@ -3,7 +3,11 @@ import MessageFormContainer from './message_form_container';
 
 class ChatView extends React.Component {
   componentDidMount() {
-    this.props.receiveCurrentChannel();
+    if(this.props.currentChannel) {
+      this.props.receiveCurrentChannel(this.props.currentChannel);
+    } else {
+      this.props.receiveCurrentChannel(0);
+    }
   }
 
   renderMessages() {

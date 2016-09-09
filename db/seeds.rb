@@ -26,7 +26,7 @@ TeamMembership.create(user_id: 21, team_id: 1)
 # Seed messages
 12.times do
   ch = Channel.create(
-    name: Faker::University.name.upcase,
+    name: Faker::StarWars.planet.upcase,
     team_id: 1,
     status: Faker::Hipster.sentence(10)
   )
