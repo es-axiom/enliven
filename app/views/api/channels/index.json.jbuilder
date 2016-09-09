@@ -2,7 +2,7 @@ unless @channels.empty?
   @channels.each do |channel|
     json.set! channel.id do
       json.channel channel
-      json.no_of_msg channel.chat.messages.count
+      json.no_of_msg channel.messages.count
     end
   end
 end

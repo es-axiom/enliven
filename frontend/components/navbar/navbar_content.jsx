@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import NavBarStatic from './navbar_static';
 
 const sessionLinks = () => (
@@ -26,7 +26,13 @@ const personalGreeting = (currentUser, logout) => (
     <NavBarStatic className='navbar-logged-in-static'/>
   	<hgroup className="header-group">
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
-  		<button className="header-button" onClick={logout}>Log Out</button>
+  		<button className="header-button"
+        onClick={() => {
+          logout();
+          hashHistory.push('/');
+        }}>
+        Log Out
+      </button>
   	</hgroup>
   </div>
 );

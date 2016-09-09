@@ -1,11 +1,9 @@
 
 # Create Teams
-5.times do
-  Team.create(
-    name: Faker::Team.name,
-    description: Faker::Hipster.sentence(5)
-  )
-end
+Team.create(
+  name: Faker::Team.name,
+  description: Faker::Hipster.sentence(5)
+)
 
 # Create Users
 # Associate users to teams
@@ -15,7 +13,7 @@ end
     email: Faker::Internet.email,
     password: 'password'
   )
-  TeamMembership.create(user_id: i, team_id: rand(5))
+  TeamMembership.create(user_id: i, team_id: 1)
 end
 
 # Create channels with their corresponding chat
@@ -23,7 +21,7 @@ end
 25.times do
   ch = Channel.create(
     name: Faker::University.name.upcase,
-    team_id: rand(5),
+    team_id: 1,
     status: Faker::Hipster.sentence(10)
   )
   next unless ch

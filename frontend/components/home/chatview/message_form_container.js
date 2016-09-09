@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
-import DMChatIndex from './dm_chat_index';
-import { fetchUserDMChats } from '../../../actions/dm_chat_actions';
+import MessageForm from './message_form';
+import { postMessage } from '../../../actions/channel_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  dmChats: state.dmChats.userDMChats
+  currentChannel: state.channel.currentChannel
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchUserDMChats: (user) => dispatch(fetchUserDMChats(user))
+  postMessage: message => dispatch(postMessage(message))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DMChatIndex);
+)(MessageForm);

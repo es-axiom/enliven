@@ -1,38 +1,26 @@
 import React from 'react';
-import ChannelContainer from '../channel/channel_container';
-import DMChatContainer from '../dm_chat/dm_chat_container';
-import TeamSelect from './team_select';
+import ChannelContainer from './channel/channel_container';
+import DMChatContainer from './dm_chat/dm_chat_container';
 
 class TreeView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.currentTeam = this.currentTeam.bind(this);
+  componentDidMount() {
+    this.props.fetchChannels();
   }
-
-  currentTeam(teamArr) {
-    const tA = Object.keys(teamArr).map( key => {
-      return teamArr[key];
-    });
-    return tA[0];
-  }
-
 
   render() {
-    let teamArr = this.props.userTeams ? this.props.userTeams : [];
-    let currentTeam = this.currentTeam(teamArr);
-    let no_of_members = currentTeam ? currentTeam.no_of_members : "";
-    let no_of_channels = currentTeam ? currentTeam.no_of_channels : "";
     return (
       <ul className='tree-view-container'>
         <li className='team-details'>
-          <TeamSelect teamArr={ teamArr } />
           <ul className='team-details-list'>
-            <li className='team-details-members'>{ no_of_members } Members</li>
-            <li className='team-details-channels'>{ no_of_channels } Channels</li>
+            <li className='team-details-title'>
+              <h2>Rebel Alliance</h2>
+            </li>
+            <li className='team-details-members'># of Members</li>
+            <li className='team-details-channels'># of Channels</li>
           </ul>
         </li>
         <li className='channel-div'>
-          <ChannelContainer currentTeam={ currentTeam }/>
+          <ChannelContainer />
         </li>
         <li className='dm-chat-div'>
           <DMChatContainer />

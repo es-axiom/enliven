@@ -1,21 +1,7 @@
 import React from 'react';
+import MessageFormContainer from './message_form_container';
 
 class ChatView extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.renderMessages = this.renderMessages.bind(this);
-  }
-
-  componentDidMount() {
-    this.props.fetchChatMessages(1)
-    // let pusher = new Pusher('', {
-    //   encrypted: true
-    // });
-    //
-    // let channel = pusher.subscribe('channel_' + this.props.)
-  }
-
   renderMessages() {
     let msgArr = [];
     if(this.props.chatMessages) {
@@ -39,9 +25,14 @@ class ChatView extends React.Component {
 
   render() {
     return(
-      <ul className ='chat-view-container'>
-        { this.renderMessages() }
-      </ul>
+      <div className='chat-view-container'>
+        <ul className ='chat-view-index'>
+          { this.renderMessages() }
+        </ul>
+        <div className='message-form-container'>
+          <MessageFormContainer />
+        </div>
+      </div>
     )
   }
 }

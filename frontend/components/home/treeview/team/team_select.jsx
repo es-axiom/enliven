@@ -1,11 +1,19 @@
 import React from 'react';
-import { receiveCurrentTeam } from '../../../actions/team_actions';
 
 class TeamSelect extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentTeam: null
+    }
     this.teamOptions = this.teamOptions.bind(this);
     this._handleSubmit = this._handleSubmit.bind(this);
+  }
+
+  componentWillReceiveProps() {
+    if(this.state.currentTeam) {
+      this.props.receiveCurrentTeam(this.state.currentTeam);
+    }
   }
 
   teamOptions(teamArr) {
@@ -23,9 +31,8 @@ class TeamSelect extends React.Component {
   }
 
   _handleSubmit() {
-    let el = document.getElementById('team-select');
-    let cT = e.options[e.selectedIndex].value;
-    this.props.receiveCurrentTeam(cT);
+    debugger;
+    return e => { this.setState({ currentTeam: e.target.value })};
   }
 
   render() {
@@ -38,7 +45,9 @@ class TeamSelect extends React.Component {
     const teamOptions = teamArr ? this.teamOptions(teamArr) : [];
     return (
       <div className='team-select-form'>
-        <select className='team-select' onSubmit={ this._handleSubmit }>
+        <select id='team-select'
+          onChange={ this._handleSubmit }
+          value={ this.state.value }>
           { teamOptions }
         </select>
       </div>

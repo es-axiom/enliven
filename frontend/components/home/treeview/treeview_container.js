@@ -1,16 +1,16 @@
 import React from 'react';
 import TreeView from './treeview';
 import { connect } from 'react-redux';
-import { receiveCurrentTeam } from '../../../actions/team_actions';
+import { fetchChannels } from '../../../actions/channel_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  userTeams: state.team.userTeams
+  channels: state.channel.channels
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveCurrentTeam: team => dispatch(receiveCurrentTeam(team))
-});
+  fetchChannels: () => dispatch(fetchChannels())
+})
 
 export default connect (
   mapStateToProps,

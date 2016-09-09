@@ -1,20 +1,30 @@
-import { receiveTeamChannels, receiveChatMessages, receiveErrors, ChannelConstants }
+import { receiveChannels, receiveChatMessages, receiveErrors, ChannelConstants }
   from '../actions/channel_actions';
-import { fetchTeamChannels, fetchChatMessages } from '../util/channel_api_util';
+import { fetchChannels, fetchChatMessages, createChannel, postMessage }
+  from '../util/channel_api_util';
 
 export default ({ getState, dispatch }) => next => action => {
-  const channelsSuccessCB = teamChannels => dispatch(receiveTeamChannels(teamChannels));
+  const channelsSuccessCB = channels => dispatch(receiveChannels(channels));
   const chatSuccessCB = messages => dispatch(receiveChatMessages(messages));
+  //HACK: below
+  const createSuccessCB = () => console.log('channel created');
+  const postSuccessCB = () => console.log('it worked');
   const errorCB = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
   };
   switch(action.type) {
-    case ChannelConstants.FETCH_TEAM_CHANNELS:
-      fetchTeamChannels(action.team_id, channelsSuccessCB, errorCB);
+    case ChannelConstants.FETCH_CHANNELS:
+      fetchChannels(channelsSuccessCB, errorCB);
       return next(action);
     case ChannelConstants.FETCH_CHAT_MESSAGES:
       fetchChatMessages(action.channel_id, chatSuccessCB, errorCB);
+      return next(action);
+    case ChannelConstants.POST_MESSAGE:
+      postMessage(action.message, postSuccessCB, errorCB);
+      return next(action);
+    case ChannelConstants.CREATE_CHANNEL:
+      createChannel(action.channel, createSuccessCB, errorCB);
       return next(action);
     default:
       return next(action);

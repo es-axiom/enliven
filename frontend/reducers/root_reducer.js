@@ -8,8 +8,8 @@ import DMChatReducer from './dm_chat_reducer';
 const RootReducer = combineReducers ({
   session: SessionReducer,
   team: TeamReducer,
-  teamChannels: ChannelsReducer,
-  dmChats: DMChatReducer
+  dmChats: DMChatReducer,
+  channel: ChannelsReducer
 });
 
 export default RootReducer;

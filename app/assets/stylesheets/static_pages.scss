@@ -46,6 +46,13 @@
 .header-static {
   display: flex;
   justify-content: space-between;
+  :hover {
+    transform: scaleX(1.4) scaleY(1.4);
+  }
+  .logo-img {
+    height: 26px;
+    width: 26px;
+  }
 }
 
 .navbar {

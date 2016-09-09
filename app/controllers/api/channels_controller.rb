@@ -1,6 +1,7 @@
 class Api::ChannelsController < ApplicationController
   def create
     @channel = Channel.create(channel_params)
+    Chat.create(channel_id: @channel.id)
     if @channel
       render 'api/channels/show'
     else
@@ -11,10 +12,10 @@ class Api::ChannelsController < ApplicationController
   def index
     @channels = []
     @messages = []
-    if params[:info]
-      @messages = Channel.find_by_id(params[:info]).chat.messages
+    if params[:channel_id]
+      @messages = Channel.find_by_id(params[:channel_id]).messages
     else
-      @channels = Team.find_by_id(params[:team_id]).channels
+      @channels = Channel.all
     end
     render 'api/channels/index'
   end
@@ -27,5 +28,11 @@ class Api::ChannelsController < ApplicationController
   def destroy
     @channel = Channel.find_by_id(params[:id])
     @channel.destroy
+  end
+
+  private
+
+  def channel_params
+    params.require(:channel).permit(:name, :status, :team_id)
   end
 end
