@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
 
 	handleGuest(){
 		const user = {
-			username: "Sebulba",
+			username: "Young Padawan",
 			password: "password",
 			email: ""
 		}
