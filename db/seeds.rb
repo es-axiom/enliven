@@ -16,6 +16,12 @@ Team.create(
   TeamMembership.create(user_id: i, team_id: 1)
 end
 
+User.create(
+  username: 'Young Padawan',
+  email: Faker::Internet.email,
+  password: 'password'
+)
+TeamMembership.create(user_id: 21, team_id: 1)
 # Create channels with their corresponding chat
 # Seed messages
 12.times do
