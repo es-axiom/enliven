@@ -8,7 +8,7 @@ export default ({ getState, dispatch }) => next => action => {
   const chatSuccessCB = messages => dispatch(receiveChatMessages(messages));
   //HACK: below
   const createSuccessCB = () => console.log('channel created');
-  const postSuccessCB = () => console.log('it worked');
+  const postSuccessCB = (messages) => dispatch(receiveChatMessages(messages));
   const errorCB = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
@@ -22,6 +22,9 @@ export default ({ getState, dispatch }) => next => action => {
       return next(action);
     case ChannelConstants.POST_MESSAGE:
       postMessage(action.message, postSuccessCB, errorCB);
+      return next(action);
+    case ChannelConstants.DELETE_MESSAGE:
+      deleteMessage(action.message_id, postSuccessCB, errorCB);
       return next(action);
     case ChannelConstants.CREATE_CHANNEL:
       createChannel(action.channel, createSuccessCB, errorCB);

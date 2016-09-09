@@ -1,5 +1,6 @@
 @dm_chats.each do |dm|
   json.set! dm.id do
-    json.partial! 'dm_chat', dm_chat: dm
+    json.dm_id dm.id
+    json.users dm.users
   end
 end

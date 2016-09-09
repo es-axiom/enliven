@@ -24,7 +24,16 @@ export const postMessage = (message, success, error) => {
   $.ajax({
     method: 'POST',
     url: '/api/messages',
-    data: { msg: message },
+    data: message,
+    success,
+    error
+  });
+};
+
+export const deleteMessage = (message_id, success, error) => {
+  $.ajax({
+    method: "DELETE",
+    url: 'api/messages/:message_id',
     success,
     error
   });

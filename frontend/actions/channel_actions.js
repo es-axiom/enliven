@@ -5,6 +5,7 @@ export const ChannelConstants = {
   RECEIVE_CHAT_MESSAGES: "RECEIVE_CHAT_MESSAGES",
   RECEIVE_CURRENT_CHANNEL: "RECEIVE_CURRENT_CHANNEL",
   POST_MESSAGE: "POST_MESSAGE",
+  DELETE_MESSAGE: "DELETE_MESSAGE",
   CREATE_CHANNEL: "CREATE_CHANNEL",
   RECEIVE_ERRORS: "RECEIVE_ERRORS"
 };
@@ -45,5 +46,10 @@ export const receiveChatMessages = messages => ({
 
 export const postMessage = message => ({
   type: ChannelConstants.POST_MESSAGE,
+  message
+});
+
+export const deleteMessage = message => ({
+  type: ChannelConstants.DELETE_MESSAGE,
   message
 });

@@ -28,6 +28,11 @@ class DmModal extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     Modal.setAppElement(document.body);
   }
+
+  componentDidMount() {
+    this.props.dmMessages(this.props.chatId);
+  }
+
   openModal() {
     this.setState({ modalIsOpen: true });
   }
@@ -38,6 +43,7 @@ class DmModal extends React.Component {
 
   render() {
     // TODO: Add DmChat to Modal
+
     return (
       <div>
         <button onClick={this.openModal}>...dm_chat...</button>

@@ -56,16 +56,15 @@
     color: gray;
     font-size: 12px;
   }
-  li {
+  button {
     padding: 10px 30px;
     text-align: left;
     font-weight: 300;
     font-size: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
+    width: 100%;
   }
-  li:hover {
+  button:hover {
     transform: scaleX(1.04) scaleY(1.04);
     background-color: white;
     font-weight: 400px;

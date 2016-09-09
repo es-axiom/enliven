@@ -13,20 +13,16 @@ const ChannelReducer = (state = _nullData, action) => {
   switch(action.type) {
     case ChannelConstants.RECEIVE_CHANNELS:
       let channels = action.channels;
-      let channelArr = [];
-      if(channels) {
-        channelArr = Object.keys(channels).map( key => {
-          return channels[key];
-        });
-      }
-      let currentChannel = channelArr[0];
-      return merge({}, state, { currentChannel, channels });
+      return merge({}, state, { channels });
     case ChannelConstants.RECEIVE_CHAT_MESSAGES:
-      let messages = action.messages;
       state.messages = null;
+      let messages = action.messages;
       return merge({}, state, { messages });
     case ChannelConstants.RECEIVE_CURRENT_CHANNEL:
-      currentChannel = action.channel;
+      if(action.channel === 0){
+        return merge({}, state);
+      }
+      let currentChannel = action.channel ? action.channel : 1;
       return merge({}, state, { currentChannel });
     case ChannelConstants.RECEIVE_ERRORS:
       const errors = action.errors;

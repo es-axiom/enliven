@@ -10,22 +10,20 @@ class ChannelIndex extends React.Component {
     this.setChannel = this.setChannel.bind(this);
   }
 
-  setChannel(channel) {
-    this.setState({ currentChannel: channel.id });
+  setChannel(channel_id) {
+    this.setState({ currentChannel: channel_id });
     this.props.receiveCurrentChannel(this.state.currentChannel);
-    this.props.fetchChatMessages(channel.id);
+    this.props.fetchChatMessages(channel_id);
   }
 
   channelList(channels) {
     return (
       channels.map( (channel, idx) => {
         return (
-          <li key={idx} className='channel-index-element'>
-            <button className='channel-index-button'
-              onClick={ this.setChannel.bind(this, channel.channel) }>
-              {channel.channel.name}
-            </button>
-          </li>
+          <button key={idx} className='channel-index-button'
+            onClick={ this.setChannel.bind(this, (idx + 1)) }>
+            {channel.channel.name}
+          </button>
         )
       })
     )

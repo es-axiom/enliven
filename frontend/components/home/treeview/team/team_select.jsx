@@ -31,7 +31,7 @@ class TeamSelect extends React.Component {
   }
 
   _handleSubmit() {
-    debugger;
+    
     return e => { this.setState({ currentTeam: e.target.value })};
   }
 

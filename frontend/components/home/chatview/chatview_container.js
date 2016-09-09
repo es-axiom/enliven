@@ -1,7 +1,8 @@
 import React from 'react';
 import ChatView from './chatview';
 import { connect } from 'react-redux';
-import { fetchChatMessages, receiveMessage } from '../../../actions/channel_actions';
+import { fetchChatMessages, receiveMessage, receiveCurrentChannel }
+  from '../../../actions/channel_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
@@ -9,6 +10,11 @@ const mapStateToProps = state => ({
   chatMessages: state.channel.messages
 });
 
+const mapDispatchToProps = dispatch => ({
+  receiveCurrentChannel: () => dispatch(receiveCurrentChannel(0))
+})
+
 export default connect (
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ChatView);

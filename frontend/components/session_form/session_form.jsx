@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
 			email: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleGuest = this.handleGuest.bind(this);
 	}
 
 	componentDidUpdate(){
@@ -32,6 +33,14 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
+	handleGuest(){
+		const user = {
+			username: "Sebulba",
+			password: "password",
+			email: ""
+		}
+		this.props.processForm({user});
+	}
 	renderErrors(){
 		return(
 			<ul>
@@ -79,6 +88,11 @@ class SessionForm extends React.Component {
 							value="Submit" />
 					</div>
 				</form>
+				<div>
+					<button onClick={this.handleGuest}>
+						Guest Login
+					</button>
+				</div>
 			</div>
 		);
 	}

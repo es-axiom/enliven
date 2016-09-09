@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :dm_chats
     resources :dms
     resources :dm_subs
+    resources :messages
   end
-
   root 'static_pages#root'
 end

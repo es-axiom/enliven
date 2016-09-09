@@ -22,23 +22,10 @@ class ChannelForm extends React.Component {
     this.props.createChannel({ channel });
   }
 
-  renderErrors(){
-    return(
-      <ul>
-        { this.props.errors.map( (error, i) => (
-          <li key={`error-${i}`}>
-            { error }
-          </li>
-        ))}
-      </ul>
-    );
-  }
-
   render() {
     return (
       <div className='channel-form-container'>
         <form onSubmit={this.handleSubmit} className='channel-form-box'>
-          { this.renderErrors() }
           <div className='channel-form'>
             <input type='text'
               value={this.state.name}

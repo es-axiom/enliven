@@ -10,7 +10,7 @@ const DMChatReducer = (state = _nullDMChats, action) => {
   switch(action.type) {
     case DMChatConstants.RECEIVE_USER_DM_CHATS:
       let userDMChats = action.dmChats;
-      return merge({}, _nullDMChats, { userDMChats });
+      return merge({}, state, { userDMChats });
     default:
       return state;
   }

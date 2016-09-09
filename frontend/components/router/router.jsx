@@ -6,6 +6,7 @@ import HomeContainer from '../home/home_container';
 import SplashPageContainer from '../splashpage/splashpage_container';
 import ChatViewContainer from '../home/chatview/chatview_container';
 import ChannelFormContainer from '../home/treeview/channel/channel_form_container';
+import ProfileViewContainer from '../profile/profile_container';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -38,6 +39,7 @@ class AppRouter extends React.Component{
           <Route path="/home" component={ HomeContainer } onEnter={ this._ensureLoggedIn } />
           <Route path='/channels/new' component={ ChannelFormContainer } onEnter={ this._ensureLoggedIn }/>
           <Route path='/channels/:channelId' component={ ChatViewContainer } onEnter={ this._ensureLoggedIn }/>
+          <Route path='/profile' component={ ProfileViewContainer } onEnter={this._ensureLoggedIn}/>
         </Route>
       </Router>
     );

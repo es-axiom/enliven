@@ -8,7 +8,7 @@ class DMChatIndex extends React.Component {
 
   dmChatButton(chat_id) {
     return (
-      <DmModalContainer />
+      <DmModalContainer key={chat_id} chatId={chat_id}/>
     )
   }
 
@@ -20,7 +20,9 @@ class DMChatIndex extends React.Component {
     return (
       listArr.map( chat => {
         return (
-          <li key={chat.id}>{ this.dmChatButton(chat.id)}</li>
+          <li key={chat.id}>
+            { this.dmChatButton(chat.id)}
+          </li>
         )
       })
     )

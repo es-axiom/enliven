@@ -11,7 +11,7 @@ class Splashpage extends React.Component {
         </div>
         <ul className="Overlay-list">
           <li><Link to='/home'>Home</Link></li>
-          <li><p>Add Team Search Container here</p></li>
+          <li><Link to='/login'>Sign In As Guest</Link></li>
         </ul>
         <footer className='footer-container'>
           <div><Link to='/contact'>Contact Us</Link></div>
