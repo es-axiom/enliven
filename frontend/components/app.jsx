@@ -4,10 +4,12 @@ import NavbarContainer from './navbar/navbar_container';
 
 const App = ({ children }) => (
   <div className='app'>
-    <header>
+    <div className='header'>
       <NavbarContainer />
-    </header>
-    { children }
+    </div>
+    <div className='main-screen'>
+      { children }
+    </div>
   </div>
 )
 

@@ -14,15 +14,27 @@
  *= require_self
  */
 
-html {
-  box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
-  background: url(https://res.cloudinary.com/es-axiom/image/upload/v1472661902/pexels-photo-25896_jfqe2o.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  a {
-    cursor: auto;
-  }
-}
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  min-height: 600px;
+  min-width: 900px;
+  font-family: sans-serif;
+  background-color: #d3bb9c;
+ }
+
+ .app {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   min-height: 600px;
+   min-width: 900px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+ }

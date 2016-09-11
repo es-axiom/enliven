@@ -7,9 +7,6 @@ const sessionLinks = () => (
     <ul className='navbar-link'>
       <li><NavBarStatic /></li>
       <ul className='navbar-right-links'>
-        <li>About Us</li>
-        <li>Find Your Team</li>
-        <li>Create A Team</li>
         <li>
           <Link to="/login" activeClassName="current">Login</Link>
         </li>
@@ -22,9 +19,9 @@ const sessionLinks = () => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-  <div className='navbar-logged-in'>
-    <NavBarStatic className='navbar-logged-in-static'/>
-  	<hgroup className="header-group">
+  <ul className='navbar-logged-in'>
+    <li className='logged-in-nav-li'><NavBarStatic className='navbar-logged-in-static'/></li>
+  	<li className='logged-in-nav-li-w-list'><hgroup className="header-group">
   		<h2 className="header-name">Hi, {currentUser.username}!</h2>
   		<button className="header-button"
         onClick={() => {
@@ -33,8 +30,8 @@ const personalGreeting = (currentUser, logout) => (
         }}>
         Log Out
       </button>
-  	</hgroup>
-  </div>
+  	</hgroup></li>
+  </ul>
 );
 
 

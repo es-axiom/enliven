@@ -1,0 +1,63 @@
+.main-screen {
+  height: calc(100% - 54px);
+}
+
+.Overlay {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('https://res.cloudinary.com/es-axiom/image/upload/v1472661902/pexels-photo-25896_jfqe2o.jpg');
+  .Overlay-quote {
+    text-align: center;
+    padding: 70px;
+    background-color: transparentize(#d3bb9c, 0.2);
+    font-size: 32px;
+    color: black;
+    font-weight: 700;
+  }
+  .Overlay-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    li {
+      color: black;
+      display: flex;
+      margin: 20px;
+      border-radius: 4%;
+      a {
+        -webkit-transition: 0.4s ease-in-out;
+        -moz-transition: 0.4s ease-in-out;
+        -o-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
+        background-color: transparentize(#d3bb9c, 0.2);
+        padding: 60px;
+        font-size: 18px;
+        font-weight: 700;
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+      a:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        cursor: pointer;
+        background-color: transparentize(#244e81, 0.3)
+      }
+    }
+  }
+}
+
+.welcome-message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .img {
+    height: 40px;
+    width: 50px;
+  }
+}

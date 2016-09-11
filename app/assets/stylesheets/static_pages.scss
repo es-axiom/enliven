@@ -1,169 +1,126 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.Overlay {
-  margin: auto;
-  text-align: center;
-  vertical-align: center;
-  background-color: none;
-  .Overlay-quote {
-    background-color: transparentize(white, 0.4);
-    padding: 30px;
-    margin-top: 150px;
-    .Overlay-quote-text {
-      font-size: 3em;
-    }
-  }
-  .Overlay-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px 100px;
-    li {
-      width: 50%;
-    }
-    li:first-of-type{
-      padding-right: 20px;
-    }
-    li p{
-      padding: 80px;
-      display: block;
-      background-color: whitesmoke;
-      text-align: center;
-      font-size: 18px;
-    }
-    li a {
-      padding: 40px;
-      display: block;
-      background-color: transparentize(whitesmoke, 0.4);
-      text-align: center;
-      font-size: 24px;
-    }
-    li a:hover {
-      transform: scaleX(1.04) scaleY(1.04);
-    }
-  }
+.header {
+  height: 52px;
 }
 
-.header-static {
+
+.header-static-title {
+  margin-left: 20px;
   display: flex;
-  justify-content: space-between;
-  :hover {
-    transform: scaleX(1.4) scaleY(1.4);
+  justify-content: space-around;
+  height: 100%;
+  .header-title {
+    height: 100%;
+    margin: auto;
   }
-  .logo-img {
-    height: 26px;
-    width: 26px;
+  .header-static-link {
+    padding: 7px;
+    font-size: 32px;
+    color: white;
+  }
+  .header-static-link:hover {
+    transform: scale(1.1);
   }
 }
 
 .navbar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: none;
   border-bottom: 2px solid white;
+  height: 50px;
   .navbar-link {
     display: flex;
     justify-content: space-between;
-    li a {
-      color: white;
-      padding: 10px;
-    }
+    flex-direction: row;
+    height: 100%;
     li {
-      padding: 10px;
+      height: 100%;
+      .header-static {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 100%;
+        .header-static-logo {
+          height: 100%;
+          text-align: center;
+          .logo-img {
+            height: 50px;
+            width: 62px;
+          }
+          .logo-img:hover {
+            transform: scaleX(1.04) scaleY(1.04);
+          }
+        }
+      }
     }
-  }
-  .navbar-right-links {
-    display: flex;
-    justify-content: space-between;
-    li {
-      padding: 20px;
-      color: white;
-    }
-    li:hover {
-      background-color: white;
-      color: black;
+    .navbar-right-links {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      li {
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        a {
+          height: 100%;
+          padding: 15px;
+          font-size: 18px;
+        }
+      }
+      li:hover {
+        background-color: white;
+        color: black;
+      }
     }
   }
 }
 
 .navbar-logged-in {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: none;
   border-bottom: 2px solid white;
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  .header-static {
-    display: flex;
-    justify-content: space-between;
-    li {
-      color: white;
-      padding: 20px;
-    }
-  }
+  flex-direction: row;
   .header-group {
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    h2 {
-      padding: 20px;
-      color: white;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    .header-name {
+      padding-right: 25px;
     }
-    button {
-      padding: 20px;
-      color: white;
+    .header-button {
+      height: 50px;
+      margin-right: 40px;
+      padding: 0 20px;
     }
-    button:hover {
+    .header-button:hover {
       color: black;
       background-color: white;
     }
   }
 }
-
-.login-form-container {
-  background-color: whitesmoke;
-  border-radius: 3%;
-  border: 3px solid white;
-  margin: auto;
-  height: auto;
-  width: 350px;
-  margin-top: 10%;
-  .login-form-box {
-    background-color: #95B1CD;
-    padding: 20px;
-  }
-  .login-form {
-    input {
-      margin: 10px;
-      padding: 20px;
-      width: 280px;
-      border-radius: 3%;
-      background-color: white;
-      font-size: 18px;
+.header-static {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+  .header-static-logo {
+    .logo-img {
+      height: 50px;
+      width: 62px;
     }
-    .submit-login-button {
-      width: 100px;
-      font-size: 16px;
+    .logo-img:hover {
+      transform: scaleX(1.04) scaleY(1.04);
     }
-  }
-}
-
-
-
-.footer-container {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  min-width: 900px;
-  display: block;
-  border-top: 2px solid white;
-  text-align: right;
-  color: white;
-  height: auto;
-  div a {
-    padding: 20px;
-    color: white;
-  }
-  div {
-    padding: 20px;
-  }
-  div a:hover {
-    color: black;
-    background-color: white;
   }
 }
