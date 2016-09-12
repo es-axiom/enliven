@@ -21,8 +21,8 @@ class ChatView extends React.Component {
           return (
             <li key={msg.id} className='message-container'>
               <ul className='message'>
-                <li key={idx+1}>{msg.user.username}</li>
-                <li key={idx}>{msg.content}</li>
+                <li className='msg-name' key={idx+1}>{msg.user.username}</li>
+                <li className='msg-content' key={idx}>{msg.content}</li>
               </ul>
             </li>
           )

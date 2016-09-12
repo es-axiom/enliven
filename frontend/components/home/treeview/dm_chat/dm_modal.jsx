@@ -46,7 +46,9 @@ class DmModal extends React.Component {
 
     return (
       <div>
-        <button onClick={this.openModal}>...dm_chat...</button>
+        <button onClick={this.openModal}>
+          <span className='dm-name'>...dm_chat...</span>
+        </button>
         <Modal className='dm-modal'
                isOpen={ this.state.modalIsOpen }
                onRequestClose={this.closeModal}

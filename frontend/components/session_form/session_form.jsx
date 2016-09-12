@@ -62,10 +62,19 @@ class SessionForm extends React.Component {
 		}
 	}
 
+	welcomeOrWelcome() {
+		if(this.props.formType === 'login') {
+			return 'Welcome back'
+		} else {
+			return 'Welcome'
+		}
+	}
+
 	render() {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
+					<h3>{this.welcomeOrWelcome()}</h3>
 					{ this.renderErrors() }
 					<div className="login-form">
 						<input type="text"
@@ -84,12 +93,12 @@ class SessionForm extends React.Component {
 							className="login-input"
 							placeholder="email"
 							hidden={this.loginOrSignUp()} />
-						<input className='submit-login-button'
+						<input className='login-input'
 							type="submit"
 							value="Submit" />
 					</div>
 				</form>
-				<div>
+				<div className='guest-login-link'>
 					<button onClick={this.handleGuest}>
 						Guest Login
 					</button>

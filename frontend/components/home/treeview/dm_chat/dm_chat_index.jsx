@@ -31,7 +31,10 @@ class DMChatIndex extends React.Component {
   render () {
     return (
       <section className='dm-chat-container'>
-        <h3>Your Direct Messages</h3>
+        <div className='dm-header'>
+          <h3>Your Direct Messages</h3>
+          <h3>+</h3>
+        </div>
         <ul className='dm-chat-index'>
           { this.allUserChats() }
         </ul>

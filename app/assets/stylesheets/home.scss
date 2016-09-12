@@ -18,12 +18,12 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background-color: #244e81;
+  background-color: var(--offset);
   .team-details {
-    height: 10%;
+    height: 15%;
   }
   .channel-div {
-    height: 45%;
+    height: 40%;
   }
   .dm-chat-div {
     height: 45%;

@@ -1,0 +1,45 @@
+.channels-box {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  .channels-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    li {
+      height: 100%;
+      color: #ccc;
+      font-size: 12px;
+      height: 50%;
+    }
+    li:first-of-type {
+      padding-left: 20px;
+    }
+    a {
+      width: 50%;
+      height: 100%;
+      padding: 20px;
+    }
+    a:hover {
+      background-color: var(--highlight);
+      transform: scale(1.02);
+    }
+  }
+  .channels-index {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    .channel-index-button {
+      color: white;
+      padding: 8px;
+      padding-left: 20px;
+    }
+    .channel-index-button:hover {
+      background-color: var(--highlight);
+      transform: scale(1.02);
+    }
+  }
+}
