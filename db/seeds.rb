@@ -28,14 +28,14 @@ TeamMembership.create(user_id: 21, team_id: 1)
   ch = Channel.create(
     name: Faker::StarWars.planet.upcase,
     team_id: 1,
-    status: Faker::Hipster.sentence(10)
+    status: Faker::StarWars.specie.downcase
   )
   next unless ch
   chat = Chat.create(channel_id: ch.id)
   next unless chat.id
   10.times do
     Message.create(
-      content: Faker::StarWars.quote,
+      content: Faker::Hacker.say_something_smart,
       chat_id: chat.id,
       user_id: rand(20)
     )

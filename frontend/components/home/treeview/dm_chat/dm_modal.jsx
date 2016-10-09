@@ -7,6 +7,13 @@ Modal.setAppElement(appElement);
 const customStyle = {
   content: {
     //TODO: Add DmModal content styling
+    position: 'fixed',
+    top : 100,
+    left: 120,
+    right: 50,
+    bottom: 120,
+    borderRadius: 3,
+    backgroundColor: '#8ea8a4'
   },
   overlay : {
     position          : 'fixed',

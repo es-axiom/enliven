@@ -1,5 +1,5 @@
 .chatView {
-  background-color: var(--mainlight);
+  background-color: var(--neutral);
   .chat-view-container {
     height: 100%;
     .chat-view-index {
@@ -15,7 +15,7 @@
           justify-content: flex-start;
           flex-direction: row;
           background-color: white;
-          border-bottom: 1px solid var(--neutral);
+          border-bottom: 1px solid var(--mainlight);
           .msg-name {
             width: 18%;
           }
