@@ -33,7 +33,7 @@ TeamMembership.create(user_id: 21, team_id: 1)
   next unless ch
   chat = Chat.create(channel_id: ch.id)
   next unless chat.id
-  10.times do
+  30.times do
     Message.create(
       content: Faker::Hacker.say_something_smart,
       chat_id: chat.id,
