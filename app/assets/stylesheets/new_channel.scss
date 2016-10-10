@@ -1,0 +1,42 @@
+.channel-form-container {
+  margin: auto;
+  height: 70%;
+  background-color: #ccc;
+  margin: 120px 100px 50px 100px;
+  border-radius: 2%;
+  .channel-form-box {
+    margin: auto;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    .channel-form {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      .channel-input {
+        margin: auto;
+        width: 70%;
+        text-align: center;
+        padding: 60px 0;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        background-color: #ccc;
+      }
+      .channel-form-submit {
+        background-color: #55acee;
+        box-shadow: 0px 5px 0px 0px;
+        padding: 20px;
+        min-width: 80px;
+        width: 20%;
+        margin: auto;
+        text-align: center;
+        color: white;
+      }
+      .channel-form-submit:active {
+        transform: translate(0px, 5px);
+        box-shadow: 0px 1px 0px 0px;
+      }
+    }
+  }
+}
