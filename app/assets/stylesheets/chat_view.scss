@@ -2,14 +2,18 @@
   background-color: var(--neutral);
   .chat-view-container {
     height: 100%;
+    width: 100%;
+    overflow: none;
+    position: relative;
     .chat-view-index {
+      overflow: auto;
+      position: absolute;
+      bottom: 0;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
+      position: relative;
       .message-container {
-        .message:first_of_type {
-          border-top: 1px solid white;
-        }
         // TODO: Fix issue with overflow messages
         .message {
           display: flex;

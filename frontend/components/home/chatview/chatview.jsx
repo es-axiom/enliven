@@ -32,9 +32,8 @@ class ChatView extends React.Component {
   }
 
   render() {
-
     return(
-      <div className='chat-view-container'>
+      <div className ='chat-view-container'>
         <ul className ='chat-view-index'>
           { this.renderMessages() }
         </ul>
