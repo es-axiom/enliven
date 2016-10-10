@@ -3,6 +3,7 @@ import React from 'react';
 class MessageForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       content: "",
       chat_id: this.props.currentChannel
@@ -11,8 +12,7 @@ class MessageForm extends React.Component {
   }
 
   update(field) {
-    return e => { this.setState({[field]: e.currentTarget.value,
-                                  chat_id: this.props.currentChannel }); };
+    return e => { this.setState({[field]: e.currentTarget.value }); };
   }
 
   clear(field) {
@@ -20,10 +20,11 @@ class MessageForm extends React.Component {
   }
 
   handleSubmit(e) {
+    this.state.chat_id = this.props.currentChannel;
     e.preventDefault();
     const message = this.state;
-    this.clear("content");
     this.props.postMessage({ message });
+    this.clear("content");
   }
 
   render() {

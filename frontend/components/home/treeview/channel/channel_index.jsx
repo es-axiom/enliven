@@ -11,8 +11,9 @@ class ChannelIndex extends React.Component {
   }
 
   setChannel(channel_id) {
+    console.log(channel_id);
     this.setState({ currentChannel: channel_id });
-    this.props.receiveCurrentChannel(this.state.currentChannel);
+    this.props.receiveCurrentChannel(channel_id);
     this.props.fetchChatMessages(channel_id);
   }
 
