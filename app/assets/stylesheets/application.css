@@ -44,5 +44,5 @@ body {
    min-width: 900px;
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
+   justify-content: space-between;
  }

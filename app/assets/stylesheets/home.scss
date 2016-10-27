@@ -12,20 +12,3 @@
     height: 100%;
   }
 }
-
-.tree-view-container {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  background-color: var(--offset);
-  .team-details {
-    height: 15%;
-  }
-  .channel-div {
-    height: 40%;
-  }
-  .dm-chat-div {
-    height: 45%;
-  }
-}

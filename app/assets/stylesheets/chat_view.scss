@@ -1,5 +1,8 @@
 .chatView {
   background-color: var(--neutral);
+  position: fixed;
+  top: 30px;
+  bottom: 0;
   .chat-view-container {
     height: 100%;
     width: 100%;

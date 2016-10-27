@@ -1,25 +1,43 @@
-.team-details-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  height: 100%;
-  color: white;
-  background-color: var(--maindark);
-  .team-details-title {
-    font-weight: 700;
-    height: 60%;
-    font-size: 28px;
-    padding: 20px 20px 0 20px;
-  }
-  .team-details-members {
-    height: 20%;
-    font-size: 12px;
-    padding-left: 40px;
-  }
-  .team-details-channels {
-    height: 20%;
-    font-size: 12px;
-    padding-left: 40px;
-    margin-bottom: 10px;
+.treeView {
+  .tree-view-container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--offset);
+    .team-details {
+      height: 15%;
+      .team-details-list {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100%;
+        color: white;
+        background-color: var(--maindark);
+        .team-details-title {
+          font-weight: 700;
+          height: 60%;
+          font-size: 28px;
+          padding: 20px 20px 0 20px;
+        }
+        .team-details-members {
+          height: 20%;
+          font-size: 12px;
+          padding-left: 40px;
+        }
+        .team-details-channels {
+          height: 20%;
+          font-size: 12px;
+          padding-left: 40px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .channel-div {
+      height: 40%;
+    }
+    .dm-chat-div {
+      height: 45%;
+    }
   }
 }
