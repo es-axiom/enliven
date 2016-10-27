@@ -7,11 +7,19 @@ const sessionLinks = () => (
     <ul className='navbar-link'>
       <li><NavBarStatic /></li>
       <ul className='navbar-right-links'>
-        <li>
-          <Link to="/login" activeClassName="current">Login</Link>
+        <li className='navbar-right-link'>
+          <Link to="/login" activeClassName="current">
+            <span className='act-link'>
+              Login
+            </span>
+          </Link>
         </li>
         <li>
-          <Link to="/signup" activeClassName="current">Sign up!</Link>
+          <Link to="/signup" activeClassName="current">
+            <span className='act-link'>
+              Sign Up
+            </span>
+          </Link>
         </li>
       </ul>
     </ul>
@@ -20,17 +28,14 @@ const sessionLinks = () => (
 
 const personalGreeting = (currentUser, logout) => (
   <ul className='navbar-logged-in'>
-    <li className='logged-in-nav-li'><NavBarStatic className='navbar-logged-in-static'/></li>
-  	<li className='logged-in-nav-li-w-list'><hgroup className="header-group">
-  		<h2 className="header-name">Hi, {currentUser.username}!</h2>
-  		<button className="header-button"
-        onClick={() => {
-          logout();
-          hashHistory.push('/');
-        }}>
-        Log Out
-      </button>
-  	</hgroup></li>
+		<h2 className="header-name">Hi, {currentUser.username}!</h2>
+		<button className="header-button"
+      onClick={() => {
+        logout();
+        hashHistory.push('/');
+      }}>
+      Log Out
+    </button>
   </ul>
 );
 

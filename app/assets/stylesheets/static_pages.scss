@@ -1,126 +1,109 @@
 .header {
-  height: 52px;
-}
-
-
-.header-static-title {
-  margin-left: 20px;
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
-  .header-title {
-    height: 100%;
-    margin: auto;
-  }
-  .header-static-link {
-    padding: 7px;
-    font-size: 32px;
-    color: white;
-  }
-  .header-static-link:hover {
-    transform: scale(1.1);
-  }
-}
-
-.navbar {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  background-color: none;
-  border-bottom: 2px solid white;
-  height: 50px;
-  .navbar-link {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    height: 100%;
-    li {
+  height: 10%;
+  .navbar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: none;
+    height: 10%;
+    .navbar-link {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
       height: 100%;
-      .header-static {
+      li {
+        height: 100%;
+        align-items: center;
+        .header-static {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          height: 100%;
+          align-items: center;
+          .header-static-logo {
+            height: 100%;
+            .logo-img {
+              height: 100%;
+            }
+            .logo-img:hover {
+              transform: scaleX(1.04) scaleY(1.04);
+            }
+          }
+          .header-static-title {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            .header-title {
+              height: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .header-static-link {
+                text-align: center;
+                padding: 20px;
+                font-size: 2em;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      .navbar-right-links {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         height: 100%;
-        .header-static-logo {
+        justify-content: space-between;
+        align-items: center;
+        li {
           height: 100%;
           text-align: center;
-          .logo-img {
-            height: 50px;
-            width: 62px;
-          }
-          .logo-img:hover {
-            transform: scaleX(1.04) scaleY(1.04);
+          color: white;
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          a {
+            height: 100%;
+            font-size: 18px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            .act-link {
+              padding: 10px;
+              min-width: 100px;
+            }
           }
         }
-      }
-    }
-    .navbar-right-links {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      li {
-        text-align: center;
-        color: white;
-        cursor: pointer;
-        display: flex;
-        a {
-          height: 100%;
-          padding: 15px;
-          font-size: 18px;
+        li:hover {
+          background-color: white;
+          color: black;
         }
-      }
-      li:hover {
-        background-color: white;
-        color: black;
       }
     }
   }
 }
 
 .navbar-logged-in {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  background-color: none;
-  border-bottom: 2px solid white;
-  height: 50px;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  .header-group {
-    height: 50px;
+  justify-content: flex-end;
+  color: white;
+  .header-name {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     align-items: center;
-    color: white;
-    .header-name {
-      padding-right: 25px;
-    }
-    .header-button {
-      height: 50px;
-      margin-right: 40px;
-      padding: 0 20px;
-    }
-    .header-button:hover {
-      color: black;
-      background-color: white;
-    }
+    padding: 0 20px;
   }
-}
-.header-static {
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-  .header-static-logo {
-    .logo-img {
-      height: 50px;
-      width: 62px;
-    }
-    .logo-img:hover {
-      transform: scaleX(1.04) scaleY(1.04);
-    }
+  button {
+    padding: 0 20px;
+  }
+  button:hover {
+    background-color: white;
+    color: black;
   }
 }

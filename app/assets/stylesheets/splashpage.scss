@@ -1,5 +1,5 @@
 .main-screen {
-  height: calc(100% - 54px);
+  height: 90%;
 }
 
 .Overlay {
@@ -34,10 +34,6 @@
         padding: 60px;
         font-size: 18px;
         font-weight: 700;
-        img {
-          height: 120px;
-          width: 120px;
-        }
       }
       a:hover {
         -webkit-transform: scale(1.03);
