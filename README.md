@@ -4,7 +4,7 @@
 
 ## MVP ##
 
-_Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rails and React - Redux. By the end of Week 9 at App Academy, this app will satisfy the criteria outlined below with intuitive and effortless navigation, while engaging the user in a well-designed experience.
+_Enliven_ is a team collaboration tool inspired by Slack, built with Ruby on Rails and React.js / Redux. This app will satisfy the criteria outlined below with intuitive and effortless navigation, while engaging the user in a well-designed experience.
  * Hosting on Heroku
  * Account creation, login
  * Guest/Demo login

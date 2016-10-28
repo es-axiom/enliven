@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: enliven_production
-  username: enliven
+  username: eric
   password: <%= ENV['ENLIVEN_DATABASE_PASSWORD'] %>
