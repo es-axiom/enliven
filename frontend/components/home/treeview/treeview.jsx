@@ -7,6 +7,9 @@ class TreeView extends React.Component {
     this.props.fetchChannels();
   }
 
+// TODO: Add flip card animation to team name so that #ofmembers and etc show up
+// <li className='team-details-members'># of Members</li>
+// <li className='team-details-channels'># of Channels</li>
   render() {
     return (
       <ul className='tree-view-container'>
@@ -15,8 +18,6 @@ class TreeView extends React.Component {
             <li className='team-details-title'>
               <h2>Rebel Alliance</h2>
             </li>
-            <li className='team-details-members'># of Members</li>
-            <li className='team-details-channels'># of Channels</li>
           </ul>
         </li>
         <li className='channel-div'>

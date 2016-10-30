@@ -3,6 +3,7 @@
   justify-content: flex-start;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   .channels-header {
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,9 @@
     .channel-index-button:hover {
       background-color: var(--highlight);
       transform: scale(1.02);
+    }
+    .channel-index-button::before {
+      content: "#";
     }
   }
 }

@@ -1,5 +1,6 @@
 class Channel < ActiveRecord::Base
   validates :name, :team_id, presence: true
+  validates :name, uniqueness: true;
   validates :status, length: { maximum: 120 }, allow_nil: true
 
   belongs_to :team
