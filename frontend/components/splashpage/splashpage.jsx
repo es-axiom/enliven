@@ -13,6 +13,7 @@ class Splashpage extends React.Component {
   }
 
   render() {
+
     return (
       <div className="Overlay">
         <ul className="Overlay-list">
