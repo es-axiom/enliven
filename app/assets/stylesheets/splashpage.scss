@@ -1,5 +1,5 @@
 .main-screen {
-  height: 90%;
+  height: calc(100% - 30px);
 }
 
 .Overlay {
@@ -10,7 +10,7 @@
   .Overlay-quote {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 70%;
     height: 100%;
     text-align: center;
@@ -20,6 +20,14 @@
       color: white;
       font-weight: 700;
     }
+    .Overlay-quote-title {
+      font-size: 48px;
+      color: white;
+      font-weight: 700;
+    }
+    .Overlay-connectivity {
+      height: 40%;
+    }
   }
   .Overlay-list {
     background-color: darken(#ccc, 50);
@@ -28,18 +36,17 @@
     justify-content: flex-start;
     flex-direction: column;
     li {
-      color: white;
+      background-color: white;
+      color: lighten(black, 20);
       display: flex;
       line-height: 100px;
-      border-bottom: 1px solid #ccc;
-      box-shadow: black 0 2px;
+      border-bottom: 2px solid #ccc;
       font-size: 22px;
       a {
         width: 100%;
         text-align: center;
       }
       a:hover {
-        box-shadow: black 0 3px;
         background-color: whitesmoke;
         color: lighten(black, 10);
       }
