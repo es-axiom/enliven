@@ -20,6 +20,7 @@ html {
   --neutral: #8ea8a4;
   --highlight: #9aba36;
   --offset: #4d5719;
+  min-width: 400px;
 }
 
 body {
@@ -28,10 +29,9 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  min-height: 600px;
-  min-width: 900px;
   font-family: sans-serif;
   background-color: var(--maindark);
+  min-width: 400px;
  }
 
  .app {
@@ -40,10 +40,10 @@ body {
    bottom: 0;
    right: 0;
    left: 0;
-   min-height: 600px;
-   min-width: 900px;
+   min-width: 400px;
  }
 
  .main-screen {
    height: 100%;
+   width: 100%;
  }

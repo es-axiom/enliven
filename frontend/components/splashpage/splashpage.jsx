@@ -24,7 +24,6 @@ class Splashpage extends React.Component {
         </ul>
         <div className="Overlay-quote">
           <span className="Overlay-quote-title">Enliven</span>
-          <img className="Overlay-connectivity" src="https://res.cloudinary.com/es-axiom/image/upload/v1477793675/Connect_duig4y.svg" alt="conectivity" />
           <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
         </div>
       </div>
