@@ -3,12 +3,17 @@
   justify-content: space-between;
   flex-direction: row;
   height: 100%;
+  width: 100%;
+  min-width: 400px;
   .treeView {
-    width: 18%;
     height: 100%;
+    flex-grow: 0.2;
+    &:hover {
+      flex-grow: 1;
+    }
   }
   .chatView {
-    width: 82%;
     height: 100%;
+    flex-grow: 5;
   }
 }

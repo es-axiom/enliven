@@ -1,58 +1,42 @@
 .chatView {
   background-color: var(--neutral);
   .chat-view-container {
-    height: 100%;
     width: 100%;
-    overflow: none;
-    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     .chat-view-index {
-      overflow: auto;
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      position: relative;
-      .message-container {
-        // TODO: Fix issue with overflow messages
-        .message {
-          display: flex;
-          justify-content: flex-start;
-          flex-direction: row;
-          background-color: white;
-          border-bottom: 1px solid var(--mainlight);
-          .msg-name {
-            width: 18%;
-          }
-          .msg-content {
-            width: 88%;
-          }
-        }
-        li:first_of_type {
-          width: 20%;
-        }
-        li:last_of_type {
-          width: 80%;
-        }
-        li {
-          padding: 8px;
-        }
-      }
+      width: 100%;
+      height: 90%;
+      display: block;
+      clear: both;
     }
     .message-form-container {
-      position: fixed;
-      bottom: 10px;
-      right: 20px;
-      left: 20%;
-      background-color: white;
-      border: 4px solid #ccc;
+      width: 100%;
+      height: 10%;
       .message-form-box {
+        width: 90%;
+        border: 3px solid gray;
+        margin: auto;
+        height: 100%;
         display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        input {
-          width: 100%;
-          padding: 20px;
+        .message-input {
+          flex-grow: 4;
+          padding: 0 10px;
+          color: gray;
+          transition: 0.3s all ease-in;
+          background-color: white;
+          font-size: 24px;
+          &:hover {
+            color: black;
+          }
+        }
+        .submit-message {
+          flex-grow: 1;
+          color: white;
+          text-align: center;
+          transition: 0.3s all ease-in;
         }
       }
     }
