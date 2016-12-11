@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveCurrentChannel: () => dispatch(receiveCurrentChannel(0))
+  receiveCurrentChannel: (channel) => dispatch(receiveCurrentChannel(channel))
 })
 
 export default connect (

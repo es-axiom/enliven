@@ -6,15 +6,46 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow: hidden;
     .chat-view-index {
       width: 100%;
       height: 90%;
       display: block;
       clear: both;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .message-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 2px;
+        .message {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          .msg-name {
+            color: black;
+            width: 20%;
+            min-width: 100px;
+            padding: 15px 10px;
+            font-size: 18px;
+            border-right: 4px solid gray;
+            background-color: #ccc;
+          }
+          .msg-content {
+            width: 80%;
+            padding: 15px 10px;
+            font-size: 16px;
+            background-color: whitesmoke;
+          }
+        }
+
+      }
     }
     .message-form-container {
       width: 100%;
       height: 10%;
+      margin: 10px;
       .message-form-box {
         width: 90%;
         border: 3px solid gray;
