@@ -17,10 +17,10 @@ class Splashpage extends React.Component {
     return (
       <div className="Overlay">
         <ul className="Overlay-list">
-          <li><Link to='/home'>Home</Link></li>
-          <li><Link to='/login'>Login</Link></li>
-          <li><Link to='/about'>About</Link></li>
-          <li><Link to='/contact'>Contact</Link></li>
+          <li><Link to='/home'><span>Home</span></Link></li>
+          <li><Link to='/login'><span>login</span></Link></li>
+          <li><Link to='/about'><span>About</span></Link></li>
+          <li><Link to='/contact'><span>Contact</span></Link></li>
         </ul>
         <div className="Overlay-quote">
           <span className="Overlay-quote-title">Enliven</span>
