@@ -29,6 +29,7 @@ class ChatView extends React.Component {
         <span className='channel-title'>Name of Channel and # of Users</span>
         <ul className ='chat-view-index'>
           { this.renderMessages() }
+          <li className='null' id='bottom'></li>
         </ul>
         <div className='message-form-container'>
           <MessageFormContainer />

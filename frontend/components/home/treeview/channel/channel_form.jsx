@@ -19,7 +19,9 @@ class ChannelForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const channel = this.state;
-    this.props.createChannel({ channel });
+    if(loggedIn) {
+      this.props.createChannel({ channel });
+    }
   }
 
   render() {

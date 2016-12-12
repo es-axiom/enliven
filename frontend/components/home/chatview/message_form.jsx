@@ -19,8 +19,8 @@ class MessageForm extends React.Component {
   }
 
   handleSubmit(e) {
-    this.state.chat_id = this.props.currentChannel;
     e.preventDefault();
+    this.state.chat_id = this.props.currentChannel;
     const message = this.state;
     this.props.postMessage({ message });
     this.clear("content");
