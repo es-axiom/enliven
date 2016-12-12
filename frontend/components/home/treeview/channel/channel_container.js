@@ -4,7 +4,6 @@ import { fetchChannels, receiveCurrentChannel, fetchChatMessages }
   from '../../../../actions/channel_actions';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser,
   channels: state.channel.channels,
   currentChannel: state.channel.currentChannel,
   chatMessages: state.channel.messages

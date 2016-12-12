@@ -2,14 +2,6 @@ import React from 'react';
 import MessageFormContainer from './message_form_container';
 
 class ChatView extends React.Component {
-  componentDidMount() {
-    if(this.props.currentChannel) {
-      this.props.receiveCurrentChannel(this.props.currentChannel);
-    } else {
-      this.props.receiveCurrentChannel(0);
-    }
-  }
-
   renderMessages() {
     let msgArr = [];
     if(this.props.chatMessages) {
@@ -34,6 +26,7 @@ class ChatView extends React.Component {
   render() {
     return(
       <div className ='chat-view-container'>
+        <span className='channel-title'>Name of Channel and # of Users</span>
         <ul className ='chat-view-index'>
           { this.renderMessages() }
         </ul>

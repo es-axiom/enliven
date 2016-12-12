@@ -10,11 +10,6 @@ const mapStateToProps = state => ({
   chatMessages: state.channel.messages
 });
 
-const mapDispatchToProps = dispatch => ({
-  receiveCurrentChannel: (channel) => dispatch(receiveCurrentChannel(channel))
-})
-
 export default connect (
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(ChatView);

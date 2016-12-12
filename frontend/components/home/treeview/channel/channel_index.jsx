@@ -4,14 +4,9 @@ import { Link } from 'react-router';
 class ChannelIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      currentChannel: null
-    }
-    this.setChannel = this.setChannel.bind(this);
   }
 
   setChannel(channel_id) {
-    this.setState({ currentChannel: channel_id });
     this.props.receiveCurrentChannel(channel_id);
     this.props.fetchChatMessages(channel_id);
   }
@@ -36,7 +31,6 @@ class ChannelIndex extends React.Component {
         return this.props.channels[key];
       })
     }
-    // TODO: Add TeamDetailModal to display 2 tabs, detail and team members
     return (
       <section className='channels-box'>
         <ul className='channels-header'>

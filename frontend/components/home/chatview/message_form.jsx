@@ -3,7 +3,6 @@ import React from 'react';
 class MessageForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       content: "",
       chat_id: this.props.currentChannel
