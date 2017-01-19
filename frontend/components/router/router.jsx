@@ -37,9 +37,6 @@ class AppRouter extends React.Component{
           <Route path="/login" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>
           <Route path="/home" component={ HomeContainer } onEnter={ this._ensureLoggedIn } />
-          <Route path='/channels/new' component={ ChannelFormContainer } onEnter={ this._ensureLoggedIn }/>
-          <Route path='/channels/:channelId' component={ ChatViewContainer } onEnter={ this._ensureLoggedIn }/>
-          <Route path='/profile' component={ ProfileViewContainer } onEnter={this._ensureLoggedIn}/>
         </Route>
       </Router>
     );

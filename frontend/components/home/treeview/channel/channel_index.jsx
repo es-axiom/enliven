@@ -35,7 +35,6 @@ class ChannelIndex extends React.Component {
       <section className='channels-box'>
         <ul className='channels-header'>
           <li><h3>Channels</h3></li>
-          <li><Link to='/channels/new'>+</Link></li>
         </ul>
         <ul className='channels-index'>
           { this.channelList(channels) }

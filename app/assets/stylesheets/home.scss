@@ -4,13 +4,10 @@
   flex-direction: row;
   height: 100%;
   width: 100%;
-  min-width: 400px;
+  min-width: 600px;
   .treeView {
     height: 100%;
-    flex-grow: 0.2;
-    &:hover {
-      flex-grow: 1;
-    }
+    min-width: 200px;
   }
   .chatView {
     height: 100%;

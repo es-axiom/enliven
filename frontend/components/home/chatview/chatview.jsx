@@ -26,7 +26,7 @@ class ChatView extends React.Component {
   render() {
     return(
       <div className ='chat-view-container'>
-        <span className='channel-title'>Name of Channel and # of Users</span>
+        <span className='channel-title'></span>
         <ul className ='chat-view-index'>
           { this.renderMessages() }
           <li className='null' id='bottom'></li>

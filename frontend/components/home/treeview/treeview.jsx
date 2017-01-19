@@ -23,9 +23,6 @@ class TreeView extends React.Component {
         <li className='channel-div'>
           <ChannelContainer />
         </li>
-        <li className='dm-chat-div'>
-          <DMChatContainer />
-        </li>
       </ul>
     )
   }
