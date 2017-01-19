@@ -6,7 +6,6 @@ import HomeContainer from '../home/home_container';
 import SplashPageContainer from '../splashpage/splashpage_container';
 import ChatViewContainer from '../home/chatview/chatview_container';
 import ChannelFormContainer from '../home/treeview/channel/channel_form_container';
-import ProfileViewContainer from '../profile/profile_container';
 
 class AppRouter extends React.Component{
   constructor(props){
