@@ -19,6 +19,7 @@
     color: white;
     li {
       height: 100%;
+      font-size: 24px;
       flex-grow: 1;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;
@@ -53,6 +54,13 @@
       font-size: 24px;
       color: white;
       padding-top: 20px;
+      a {
+        color: #D1E2F6;
+        &:hover {
+          color: white;
+          font-weight: 700;
+        }
+      }
     }
   }
 }

@@ -18,13 +18,14 @@ class Splashpage extends React.Component {
       <div className="Overlay">
         <ul className="Overlay-list">
           <li><Link to='/home'><span>Home</span></Link></li>
-          <li><Link to='/login'><span>login</span></Link></li>
+          <li><Link to='/login'><span>Login</span></Link></li>
           <li><Link to='/about'><span>About</span></Link></li>
           <li><Link to='/contact'><span>Contact</span></Link></li>
         </ul>
         <div className="Overlay-quote">
           <span className="Overlay-quote-title">Enliven</span>
           <span className="Overlay-quote-text">Stick with your team anywhere you go.</span>
+          <span className="Overlay-quote-text"><Link to='/signup'>Never been here before?</Link></span>
         </div>
       </div>
     )
